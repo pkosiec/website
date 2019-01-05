@@ -1,0 +1,63 @@
+{
+  "name": "pkosiec-website",
+  "private": true,
+  "description": "Pawel Kosiec - Personal Website",
+  "version": "0.1.0",
+  "author": {
+    "name": "Pawel Kosiec",
+    "email": "pawel@kosiec.net"
+  },
+  "dependencies": {
+    "gatsby": "^2.0.85",
+    "gatsby-image": "^2.0.20",
+    "gatsby-plugin-manifest": "^2.0.13",
+    "gatsby-plugin-offline": "^2.0.16",
+    "gatsby-plugin-react-helmet": "^3.0.2",
+    "gatsby-plugin-sharp": "^2.0.17",
+    "gatsby-source-filesystem": "^2.0.8",
+    "gatsby-transformer-sharp": "^2.1.10",
+    "prop-types": "^15.6.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-helmet": "^5.2.0"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "start": "npm run develop",
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "serve": "gatsby serve",
+    "publish": "npm run build && gh-pages -d public -m 'Deploy new version of site'"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.0.1",
+    "prettier": "^1.15.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pkosiec/website"
+  },
+  "bugs": {
+    "url": "https://github.com/pkosiec/website/issues"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "linters": {
+      "*.{js,json,css,jsx}": [
+        "prettier --write",
+        "git add"
+      ]
+    },
+    "ignore": [
+      "package.json",
+      "package-lock.json"
+    ]
+  }
+}
