@@ -26,11 +26,14 @@
   ],
   "license": "MIT",
   "scripts": {
+    "start": "npm run develop",
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "start": "npm run develop"
+    "serve": "gatsby serve",
+    "publish": "npm run build && gh-pages -d public -m 'Deploy new version of site'"
   },
   "devDependencies": {
+    "gh-pages": "^2.0.1",
     "prettier": "^1.15.2"
   },
   "repository": {
