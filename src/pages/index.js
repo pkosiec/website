@@ -1,16 +1,30 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from "react";
 
-import Layout from '../components/layout'
-import SEO from '../components/seo'
+import DefaultLayout from "../components/layout/DefaultLayout";
+import { graphql } from "gatsby";
+import SocialTiles from "../components/home/SocialTiles";
+import ContactAction from "../components/home/ContactAction";
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      Hello world
+const IndexPage = ({ data }) => (
+  <DefaultLayout>
+    <div>
+      <SocialTiles tiles={data.site.siteMetadata.socialMedia} />
+      <ContactAction/>
     </div>
-  </Layout>
-)
+  </DefaultLayout>
+);
 
-export default IndexPage
+export const query = graphql`
+  query IndexPageQuery {
+    site {
+      siteMetadata {
+        socialMedia {
+          name
+          url
+        }
+      }
+    }
+  }
+`;
+
+export default IndexPage;
