@@ -1,12 +1,16 @@
 import React from "react";
+import styled from "styled-components";
+
 import SocialTile from "./SocialTile";
+import Section from "./Section";
 
 const SocialTiles = ({ tiles }) => (
-  <section>
+  <Section>
+      <h1>Social media</h1>
     {tiles.map(tile => (
-      <SocialTile name={tile.name} url={tile.url} />
+      <SocialTile key={tile.name} icon={tile.icon} name={tile.name} url={tile.url} />
     ))}
-  </section>
+  </Section>
 );
 
 export default SocialTiles;

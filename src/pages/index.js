@@ -5,6 +5,8 @@ import { graphql } from "gatsby";
 import SocialTiles from "../components/home/SocialTiles";
 import ContactAction from "../components/home/ContactAction";
 
+import "../config/icons";
+
 const IndexPage = ({ data }) => (
   <DefaultLayout>
     <div>
@@ -21,6 +23,7 @@ export const query = graphql`
         socialMedia {
           name
           url
+          icon
         }
       }
     }
