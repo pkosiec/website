@@ -5,8 +5,9 @@ const typography = new Typography({
     bodyColor: "#fff",
     baseLineHeight: 1.45,
     headerFontFamily: [
-      "Montserrat"
+      "Lato"
     ],
+    headerWeight: 400,
     bodyFontFamily: ["Source Sans Pro", "serif"],
   })
 

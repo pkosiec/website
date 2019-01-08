@@ -62,10 +62,16 @@ const TileLink = styled.a`
   color: #fff;
 `;
 
-const SocialTile = ({ icon, name, url }) => (
-  <Tile>
+const SocialTile = ({
+  iconName,
+  iconPrefix = "fab",
+  name,
+  url,
+  highlighted,
+}) => (
+  <Tile highlighted={highlighted}>
     <TileLink href={url} target="_blank" rel="noopener noreferrer">
-      <Icon size="2x" icon={["fab", icon]} />
+      <Icon size="2x" icon={[iconPrefix, iconName]} />
       <Caption>{name}</Caption>
     </TileLink>
   </Tile>

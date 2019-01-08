@@ -4,11 +4,23 @@ import styled from "styled-components";
 import SocialTile from "./SocialTile";
 import Section from "./Section";
 
-const SocialTiles = ({ tiles }) => (
+const SocialTiles = ({ tiles, email }) => (
   <Section>
-      <h1>Social media</h1>
+    <SocialTile
+      key="email"
+      highlighted
+      name="Get in touch"
+      iconName="envelope"
+      iconPrefix="fa"
+      url={`mailto:${email}`}
+    />
     {tiles.map(tile => (
-      <SocialTile key={tile.name} icon={tile.icon} name={tile.name} url={tile.url} />
+      <SocialTile
+        key={tile.name}
+        iconName={tile.icon}
+        name={tile.name}
+        url={tile.url}
+      />
     ))}
   </Section>
 );

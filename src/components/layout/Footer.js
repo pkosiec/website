@@ -8,7 +8,7 @@ const StyledFooter = styled.footer`
 `;
 
 const FooterText = styled.p`
-  padding: 20px 0;
+  padding: 0px 0;
   margin: 0;
   color: #ccc;
   font-size: 0.7rem;

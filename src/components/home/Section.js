@@ -6,8 +6,8 @@ import Content from "../layout/Content";
 
 const SectionWrapper = styled.section`
   width: 100%;
-  border-top: 1px solid #333;
-  min-height: 60vh;
+  border-bottom: 1px solid #333;
+  min-height: ${props => props.height ? props.height : 'auto'};
   background: ${props =>
     props.background ? props.background : BACKGROUND_COLOR};
   display: flex;
@@ -15,8 +15,8 @@ const SectionWrapper = styled.section`
   justify-content: center;
 `;
 
-const Section = ({ background, children }) => (
-  <SectionWrapper background={background}>
+const Section = ({ className, background, borderColor, height, children }) => (
+  <SectionWrapper className={className} background={background} borderColor={borderColor} height={height}>
     <Content>{children}</Content>
   </SectionWrapper>
 );
