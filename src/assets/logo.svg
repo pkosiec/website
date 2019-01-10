@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="21.515mm" height="21.515mm" version="1.1" viewBox="0 0 21.515196 21.515196" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g transform="translate(-17.13 -113.95)" stroke-width=".361">
+  <circle cx="80.314" cy="125.55" r="10.758" fill="#fc0"/>
+  <circle cx="108.85" cy="125.42" r="10.758" fill="#c83737"/>
+  <circle cx="51.984" cy="125.08" r="10.758" fill="#fc0"/>
+  <circle cx="27.888" cy="124.71" r="10.758" fill="#fc0"/>
+ </g>
+ <g transform="translate(-17.13 -113.95)" fill="#1a1a1a">
+  <text transform="scale(-1,1)" x="-87.216408" y="128.92403" font-family="sans-serif" font-size="10.583px" letter-spacing="0px" stroke-width=".26458" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="-87.216408" y="128.92403" fill="#1a1a1a" font-family="Hero" stroke-width=".26458">K</tspan></text>
+  <text x="74.460335" y="128.92403" font-family="sans-serif" font-size="10.583px" letter-spacing="0px" stroke-width=".26458" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="74.460335" y="128.92403" fill="#1a1a1a" font-family="Hero" stroke-width=".26458">P</tspan></text>
+  <g transform="translate(.025856 .32613)" font-family="sans-serif" font-size="10.583px" letter-spacing="0px" stroke-width=".26458" word-spacing="0px">
+   <text transform="scale(-1,1)" x="-58.885841" y="128.4563" style="line-height:1.25" xml:space="preserve"><tspan x="-58.885841" y="128.4563" fill="#1a1a1a" font-family="Montserrat" stroke-width=".26458">K</tspan></text>
+   <text x="45.030304" y="128.4563" style="line-height:1.25" xml:space="preserve"><tspan x="45.030304" y="128.4563" fill="#1a1a1a" font-family="Montserrat" stroke-width=".26458">P</tspan></text>
+  </g>
+  <g transform="translate(-23.541 .22597)">
+   <g transform="translate(-10.119 .021168)" fill="#1a1a1a" font-family="sans-serif" font-size="10.583px" letter-spacing="0px" stroke-width=".26458" word-spacing="0px">
+    <text transform="scale(-1,1)" x="-68.002762" y="128.22876" style="line-height:1.25" xml:space="preserve"><tspan x="-68.002762" y="128.22876" fill="#1a1a1a" font-family="Lato" stroke-width=".26458">K</tspan></text>
+    <text x="55.093384" y="128.27109" style="line-height:1.25" xml:space="preserve"><tspan x="55.093384" y="128.27109" fill="#1a1a1a" font-family="Lato" stroke-width=".26458">P</tspan></text>
+   </g>
+  </g>
+ </g>
+</svg>

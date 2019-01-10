@@ -5,7 +5,7 @@ module.exports = {
   siteMetadata: {
     title: `Paweł Kosiec, Full-stack Developer`,
     author: package.author,
-    copyright: `© 2012-${new Date().getFullYear()} Paweł Kosiec`,
+    copyright: `©2012-${new Date().getFullYear()} Paweł Kosiec`,
     description:
       "I am software developer interested in technology and gadgets. Cloud-native and open-source enthusiast.",
     socialMedia: [

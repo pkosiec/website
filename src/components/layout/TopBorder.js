@@ -5,7 +5,7 @@ import {ACCENT_COLOR} from "../../constans/colors";
 const TopBorder = styled.div`
     width: 100%;
     display: block;
-    height: 2px;
+    height: 3px;
     background: ${ACCENT_COLOR};
 `
 
