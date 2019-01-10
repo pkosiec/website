@@ -4,6 +4,8 @@ import { StaticQuery, graphql } from "gatsby";
 import Footer from "./Footer";
 import Metadata from "./Metadata";
 import Header from "./Header";
+import GlobalStyles from "./GlobalStyles";
+import TopBorder from "./TopBorder";
 
 const query = graphql`
   query LayoutQuery {
@@ -27,6 +29,8 @@ const DefaultLayout = ({ children }) => (
       const { title, description, copyright, author } = data.site.siteMetadata;
       return (
         <>
+          <GlobalStyles/>
+          <TopBorder/>
           <Metadata
             title={title}
             description={description}
