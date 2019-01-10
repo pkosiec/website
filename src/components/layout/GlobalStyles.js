@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import "minireset.css/minireset.min.css";
+import "normalize.css";
 
 import { BACKGROUND_COLOR } from "../../constans/colors";
 

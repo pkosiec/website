@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 //TODO: Import SVG
-import logo from "../../images/logo.png";
+import logo from "../../assets/logo.png";
 
 import Content from "./Content";
 
@@ -28,7 +28,7 @@ const HeaderText = styled.h1`
   font-size: 2rem;
 `;
 
-const Header = ({ title }) => (
+const Header = () => (
   <Content as="header">
     <HeaderContent>
       <Image src={logo} />

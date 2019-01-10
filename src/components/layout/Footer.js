@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Section from "../home/Section";
 import Content from "./Content";
 
 const StyledFooter = styled.footer`

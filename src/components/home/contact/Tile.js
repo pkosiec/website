@@ -1,21 +1,26 @@
 import styled from "styled-components";
+import { XS } from "../../../config/responsive";
 
 const DEFAULT_TILE_DIMENSION = "100px";
 
-export const Tile = styled.div`
-  width: ${props => props.width ? props.width : DEFAULT_TILE_DIMENSION};
-  height: ${props => props.height ? props.height : DEFAULT_TILE_DIMENSION};
+export const Tile = styled.li`
+  width: ${props => (props.width ? props.width : DEFAULT_TILE_DIMENSION)};
+  height: ${props => (props.height ? props.height : DEFAULT_TILE_DIMENSION)};
   display: inline-block;
   position: relative;
+  margin: 15px;
   vertical-align: middle;
-  line-height: ${props => props.lineHeight ? props.lineHeight : DEFAULT_TILE_DIMENSION};
+  line-height: ${props =>
+    props.lineHeight ? props.lineHeight : DEFAULT_TILE_DIMENSION};
   text-align: center;
-  border: 1px solid ${props => props.highlighted ? "#e5e5e5" : "#2b2b2b"} ;
+  border: 1px solid ${props => (props.highlighted ? "#e5e5e5" : "#2b2b2b")};
   transition: all ease-out 0.15s;
 
   &:hover {
-    border-color: ${props => props.highlighted ? "#ffcc00" : "#504e4e"};
-    ${props => props.highlighted && `
+    border-color: ${props => (props.highlighted ? "#ffcc00" : "#504e4e")};
+    ${props =>
+      props.highlighted &&
+      `
     > * {
       color: #ffcc00;
     }
@@ -24,7 +29,7 @@ export const Tile = styled.div`
 
   &:focus,
   &:active {
-    border-color: ${props => props.highlighted ? "#ffcc00" : "#585656"};
+    border-color: ${props => (props.highlighted ? "#ffcc00" : "#585656")};
     background: #2b2b2b;
 
     span {
@@ -32,9 +37,14 @@ export const Tile = styled.div`
     }
   }
 
-  & + & {
-    margin-left: 25px;
+  *:last-child {
+    margin-bottom: auto;
   }
+
+  @media screen and (max-width: ${XS}) {
+    width: calc(${props => props.big ? "100%" : "50%"} - 30px);
+  }
+
 `;
 
 export const TileLink = styled.a`

@@ -25,6 +25,7 @@
     "gatsby-transformer-sharp": "^2.1.10",
     "i": "^0.3.6",
     "minireset.css": "0.0.3",
+    "normalize.css": "^8.0.1",
     "npm": "^6.5.0",
     "prop-types": "^15.6.2",
     "react": "^16.6.3",

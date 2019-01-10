@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { BACKGROUND_COLOR } from "../../constans/colors";
-import Content from "../layout/Content";
+import Content from "./Content";
 
 const SectionWrapper = styled.section`
   width: 100%;

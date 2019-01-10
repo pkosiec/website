@@ -1,11 +1,20 @@
 import React from "react";
 import styled from "styled-components";
-import Section from "./Section";
+import Section from "../../layout/Section";
 
-import { ACCENT_COLOR } from "../../constans/colors";
+import { ACCENT_COLOR } from "../../../constans/colors";
+import { XS, SM } from "../../../config/responsive";
 
 const AboutSection = styled.div`
   max-width: 60%;
+
+  @media screen and (max-width: ${SM}) {
+    max-width: 80%;
+  }
+
+  @media screen and (max-width: ${XS}) {
+    max-width: 100%;
+  }
 `;
 
 const P = styled.p`
@@ -19,10 +28,15 @@ const A = styled.a`
   color: #fff;
   text-decoration: none;
   border-bottom: 1px dotted #fff;
+  transition: all ease-out 0.15s;
 
-  &:hover {
+  &:hover, &:focus {
     color: ${ACCENT_COLOR};
-    border-bottom: 1px solid ${ACCENT_COLOR};
+    border-bottom: 1px dotted ${ACCENT_COLOR};
+  }
+
+  &:active {
+    opacity: 0.8;
   }
 `;
 

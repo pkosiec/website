@@ -23,6 +23,20 @@ module.exports = {
         icon: "instagram",
       },
     ],
+    featuredProjects: [
+      {
+        title: "Mongo Seeding",
+        description: "Open source solution for populating MongoDB database",
+        link: "https://github.com/pkosiec/mongo-seeding",
+        image: "/projects/mongo-seeding.png",
+      },
+      {
+        title: "Gophers Silesia",
+        description: "Local Go & Cloud Native Meetup",
+        link: "https://www.meetup.com/GophersSilesia/",
+        image: "/projects/gophers-silesia.png",
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -30,8 +44,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: `assets`,
+        path: `${__dirname}/src/assets`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -45,7 +59,7 @@ module.exports = {
         background_color: BACKGROUND_COLOR,
         theme_color: ACCENT_COLOR,
         display: `minimal-ui`,
-        icon: `src/images/logo.png`,
+        icon: `src/assets/logo.png`,
       },
     },
     {
