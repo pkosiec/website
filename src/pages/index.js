@@ -2,16 +2,18 @@ import React from "react";
 
 import DefaultLayout from "../components/layout/DefaultLayout";
 import { graphql } from "gatsby";
-import SocialTiles from "../components/home/SocialTiles";
 
 import "../config/icons";
 import About from "../components/home/About";
+import Projects from "../components/home/Projects";
+import Contact from "../components/home/contact/Contact";
 
 const IndexPage = ({ data }) => (
   <DefaultLayout>
     <div>
       <About/>
-      <SocialTiles tiles={data.site.siteMetadata.socialMedia} />
+      <Projects/>
+      <Contact tiles={data.site.siteMetadata.socialMedia} />
     </div>
   </DefaultLayout>
 );

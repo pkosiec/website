@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Section from "./Section";
 
-import {ACCENT_COLOR} from "../../constans/colors";
+import { ACCENT_COLOR } from "../../constans/colors";
 
 const AboutSection = styled.div`
   max-width: 60%;
@@ -12,7 +12,7 @@ const P = styled.p`
   margin: 0;
   line-height: 1.9em;
   font-size: 1.2rem;
-  margin-bottom: 10px; 
+  margin-bottom: 10px;
 `;
 
 const A = styled.a`
@@ -26,9 +26,8 @@ const A = styled.a`
   }
 `;
 
-const Strong = styled.strong`
+const Highlight = styled.span`
   font-weight: bold;
-  color: ${ACCENT_COLOR};
 `;
 
 const About = () => (
@@ -42,9 +41,10 @@ const About = () => (
           Kyma
         </A>
         , an open source project. I write back-end services in{" "}
-        <Strong>Go</Strong>, and modern front-ends using{" "}
-        <Strong>React.js</Strong>. I work in Cloud-native environment,
-        associated with <Strong>microservices</Strong> and extending <Strong>Kubernetes</Strong>.
+        <Highlight>Go</Highlight>, and modern front-ends using{" "}
+        <Highlight>React.js</Highlight>. I work in Cloud-native environment,
+        associated with <Highlight>microservices</Highlight> and extending{" "}
+        <Highlight>Kubernetes</Highlight>.
       </P>
       <P>
         I have recently completed a master's in Computer Science at Silesian

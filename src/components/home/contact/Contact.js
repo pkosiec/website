@@ -1,15 +1,13 @@
 import React from "react";
-import styled from "styled-components";
 
 import SocialTile from "./SocialTile";
-import Section from "./Section";
+import Section from "../Section";
+import ContactAction from "./ContactAction";
 
-const SocialTiles = ({ tiles, email }) => (
+const Contact = ({ tiles, email }) => (
   <Section>
-    <SocialTile
+    <ContactAction
       key="email"
-      highlighted
-      name="Get in touch"
       iconName="envelope"
       iconPrefix="fa"
       url={`mailto:${email}`}
@@ -25,4 +23,4 @@ const SocialTiles = ({ tiles, email }) => (
   </Section>
 );
 
-export default SocialTiles;
+export default Contact;
