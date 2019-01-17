@@ -2,15 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import Section from "../../layout/Section";
 
-import { ACCENT_COLOR } from "../../../constans/colors";
+import { ACCENT_COLOR } from "../../../config/colors";
 import { XS, SM } from "../../../config/responsive";
 
-const AboutSection = styled.div`
+const TextWrapper = styled.div`
   max-width: 65%;
-
-  p:last-child {
-    margin: 0;
-  }
 
   @media screen and (max-width: ${SM}) {
     max-width: 80%;
@@ -24,7 +20,11 @@ const AboutSection = styled.div`
 const P = styled.p`
   margin: 0 0 1em 0;
   line-height: 1.9em;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+
+  :last-of-type {
+    margin: 0;
+  }
 `;
 
 const A = styled.a`
@@ -50,12 +50,11 @@ const Highlight = styled.span`
 
 const About = () => (
   <Section>
-    <AboutSection>
+    <TextWrapper>
       <h1>Hi. I'm Paweł Kosiec.</h1>
+      <P>I'm a Full-stack Developer located in Gliwice, Poland.</P>
       <P>
-        I'm a Full-stack Developer located in Gliwice, Poland.</P>
-        <P>Currently
-        I&nbsp;work at SAP, where I&nbsp;develop{" "}
+        Currently I&nbsp;work at SAP, where I&nbsp;develop{" "}
         <A href="https://kyma-project.io" target="_blank">
           Kyma
         </A>
@@ -66,14 +65,17 @@ const About = () => (
         extending <Highlight>Kubernetes</Highlight>.
       </P>
       <P>
-        I&nbsp;have recently completed a master's in Computer Science at Silesian
-        University of Technology.
+        I&nbsp;have recently completed a master's in Computer Science at
+        Silesian University of Technology.
       </P>
       <P>
-        I'm open source and Cloud Native enthusiast. That's why I'm an&nbsp;co-organizer
-        of the&nbsp;<A href="https://www.meetup.com/GophersSilesia">Gophers Silesia</A> meetup, which is a local community interested in Go & Cloud Native topics.
+        I'm open source and Cloud Native enthusiast. That's why I'm
+        an&nbsp;co-organizer of the&nbsp;
+        <A href="https://www.meetup.com/GophersSilesia">Gophers Silesia</A>{" "}
+        meetup, which is a local community interested in Go & Cloud Native
+        topics.
       </P>
-    </AboutSection>
+    </TextWrapper>
   </Section>
 );
 

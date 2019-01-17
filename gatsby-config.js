@@ -1,5 +1,5 @@
 const package = require("./package.json");
-const { BACKGROUND_COLOR, ACCENT_COLOR } = require("./src/constans/colors");
+const { BACKGROUND_COLOR, ACCENT_COLOR } = require("./src/config/colors");
 
 module.exports = {
   siteMetadata: {

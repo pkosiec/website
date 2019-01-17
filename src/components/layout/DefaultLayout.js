@@ -29,16 +29,16 @@ const DefaultLayout = ({ children }) => (
       const { title, description, copyright, author } = data.site.siteMetadata;
       return (
         <>
-          <GlobalStyles/>
-          <TopBorder/>
+          <GlobalStyles />
+          <TopBorder />
           <Metadata
             title={title}
             description={description}
             copyright={copyright}
             author={author.name}
           />
-          <Header title={title}/>
-          {children}
+          <Header title={title} />
+          <div>{children}</div>
           <Footer text={copyright} />
         </>
       );

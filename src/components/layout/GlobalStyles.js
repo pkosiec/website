@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import "normalize.css";
 
-import { BACKGROUND_COLOR } from "../../constans/colors";
+import { BACKGROUND_COLOR } from "../../config/colors";
 
 const GlobalStyles = createGlobalStyle`
   body {
