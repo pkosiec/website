@@ -5,6 +5,7 @@ import { media } from "../../../config/responsive";
 import { Paragraph } from "../../layout/shared/Paragraph";
 import { Highlight } from "../../layout/shared/Highlight";
 import { Link } from "../../layout/shared/Link";
+import { Headline1 } from "../../layout/shared/Headline";
 
 const TextWrapper = styled.div`
   max-width: 65%;
@@ -21,7 +22,7 @@ const TextWrapper = styled.div`
 export const About = () => (
   <Section>
     <TextWrapper>
-      <h1>Hi. I'm Paweł Kosiec.</h1>
+      <Headline1>Hi. I'm Paweł Kosiec.</Headline1>
       <Paragraph>
         I'm a Full-stack Developer located in Gliwice, Poland.
       </Paragraph>
