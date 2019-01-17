@@ -1,11 +1,11 @@
 import React from "react";
 import Helmet from "react-helmet";
 
-const Metadata = ({ title, description, author, copyright }) => {
+export const Metadata = ({ title, description, authorName, copyright }) => {
   return (
     <Helmet
       htmlAttributes={{
-        lang: "en"
+        lang: "en",
       }}
       title={title}
       meta={[
@@ -31,7 +31,7 @@ const Metadata = ({ title, description, author, copyright }) => {
         },
         {
           name: "twitter:creator",
-          content: author,
+          content: authorName,
         },
         {
           name: "twitter:title",
@@ -58,5 +58,3 @@ const Metadata = ({ title, description, author, copyright }) => {
     />
   );
 };
-
-export default Metadata;

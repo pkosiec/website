@@ -1,16 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 
-import SocialTile from "./SocialTile";
-import Section from "../../layout/Section";
-import ContactAction from "./ContactAction";
+import { SocialTile } from "./SocialTile";
+import { Section } from "../../layout/shared/Section";
+import { ContactAction } from "./ContactAction";
 
 const TileList = styled.ul`
   list-style-type: none;
   margin: 0 -15px;
 `;
 
-const Contact = ({ tiles, email }) => (
+export const Contact = ({ tiles, email }) => (
   <Section>
     <TileList>
       <ContactAction iconName="envelope" iconPrefix="fa" email={email} />
@@ -25,5 +25,3 @@ const Contact = ({ tiles, email }) => (
     </TileList>
   </Section>
 );
-
-export default Contact;

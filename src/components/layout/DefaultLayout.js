@@ -1,11 +1,11 @@
 import React from "react";
 import { StaticQuery, graphql } from "gatsby";
 
-import Footer from "./Footer";
-import Metadata from "./Metadata";
-import Header from "./Header";
-import GlobalStyles from "./GlobalStyles";
-import TopBorder from "./TopBorder";
+import { Footer } from "./default/Footer";
+import { Metadata } from "./default/Metadata";
+import { Header } from "./default/Header";
+import { GlobalStyles } from "./default/GlobalStyles";
+import { TopBorder } from "./default/TopBorder";
 
 const query = graphql`
   query LayoutQuery {
@@ -22,28 +22,30 @@ const query = graphql`
   }
 `;
 
-const DefaultLayout = ({ children }) => (
+export const DefaultLayout = ({ pageTitle, children }) => (
   <StaticQuery
     query={query}
     render={data => {
       const { title, description, copyright, author } = data.site.siteMetadata;
+
+      const metadataTitle = pageTitle ? `${pageTitle} - ${title}` : title;
+      const authorName = author.name;
+
       return (
         <>
           <GlobalStyles />
           <TopBorder />
           <Metadata
-            title={title}
+            title={metadataTitle}
             description={description}
             copyright={copyright}
-            author={author.name}
+            authorName={authorName}
           />
-          <Header title={title} />
-          <div>{children}</div>
+          <Header authorName={authorName} />
+          <main>{children}</main>
           <Footer text={copyright} />
         </>
       );
     }}
   />
 );
-
-export default DefaultLayout;

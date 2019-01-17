@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-import { BACKGROUND_COLOR } from "../../config/colors";
-import Content from "./Content";
+import { BACKGROUND_COLOR } from "../../../config/colors";
+import { Content } from "./Content";
 
 const SectionWrapper = styled.section`
   width: 100%;
@@ -15,7 +15,13 @@ const SectionWrapper = styled.section`
   justify-content: center;
 `;
 
-const Section = ({ className, background, borderColor, height, children }) => (
+export const Section = ({
+  className,
+  background,
+  borderColor,
+  height,
+  children,
+}) => (
   <SectionWrapper
     className={className}
     background={background}
@@ -25,5 +31,3 @@ const Section = ({ className, background, borderColor, height, children }) => (
     <Content>{children}</Content>
   </SectionWrapper>
 );
-
-export default Section;

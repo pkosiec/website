@@ -2,21 +2,19 @@ import React from "react";
 import styled from "styled-components";
 
 const Box = styled.div`
-    width: 350px;
+  width: 350px;
 `;
 
 const LinkBlock = styled.a`
-    width: 100%;
-    height: 100%;
-    display: block;
-    padding: 15px;
-    text-decoration: none;
-    color: #fff;
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #fff;
 `;
 
-const Header = styled.h3`
-
-`;
+const Header = styled.h3``;
 
 export const Project = ({ project }) => {
   return (

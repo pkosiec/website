@@ -12,12 +12,10 @@ const Icon = styled(FontAwesomeIcon)`
   margin: auto;
 `;
 
-const SocialTile = ({ iconName, iconPrefix = "fab", url }) => (
-    <Tile>
-      <TileLink href={url} target="_blank" rel="noopener noreferrer">
-        <Icon size="2x" icon={[iconPrefix, iconName]} />
-      </TileLink>
-    </Tile>
+export const SocialTile = ({ iconName, iconPrefix = "fab", url }) => (
+  <Tile>
+    <TileLink href={url} target="_blank" rel="noopener noreferrer">
+      <Icon size="2x" icon={[iconPrefix, iconName]} />
+    </TileLink>
+  </Tile>
 );
-
-export default SocialTile;

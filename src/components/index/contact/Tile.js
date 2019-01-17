@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { XS } from "../../../config/responsive";
+import { media } from "../../../config/responsive";
 
 const DEFAULT_TILE_DIMENSION = "100px";
 
@@ -41,10 +41,9 @@ export const Tile = styled.li`
     margin-bottom: auto;
   }
 
-  @media screen and (max-width: ${XS}) {
-    width: calc(${props => props.big ? "100%" : "50%"} - 30px);
-  }
-
+  ${media.phone`
+  width: calc(${props => (props.big ? "100%" : "50%")} - 30px);
+  `}
 `;
 
 export const TileLink = styled.a`

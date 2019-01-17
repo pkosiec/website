@@ -20,13 +20,11 @@ const Caption = styled.p`
   margin: 0 0 0 25px;
 `;
 
-const ContactAction = ({ email }) => (
-    <Tile big width="250px" lineHeight="70px" highlighted as="li">
-      <TileLink href={`mailto:${email}`}>
-        <Icon size="2x" icon="envelope" />
-        <Caption>Get in touch</Caption>
-      </TileLink>
-    </Tile>
+export const ContactAction = ({ email }) => (
+  <Tile big width="250px" lineHeight="70px" highlighted as="li">
+    <TileLink href={`mailto:${email}`}>
+      <Icon size="2x" icon="envelope" />
+      <Caption>Get in touch</Caption>
+    </TileLink>
+  </Tile>
 );
-
-export default ContactAction;
