@@ -4,7 +4,7 @@
   "description": "Pawel Kosiec - Personal Website",
   "version": "0.1.0",
   "author": {
-    "name": "Pawel Kosiec",
+    "name": "Paweł Kosiec",
     "email": "pawel@kosiec.net"
   },
   "dependencies": {
@@ -43,8 +43,7 @@
     "start": "npm run develop",
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "serve": "gatsby serve",
-    "publish": "npm run build && gh-pages -d public -m 'Deploy new version of site'"
+    "serve": "gatsby serve"
   },
   "devDependencies": {
     "gh-pages": "^2.0.1",

@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+  - "stable"
+
+before_script:
+  - npm install --no-optional
+script:
+  - npm run build
+
+deploy:
+  provider: pages
+  github-token: $GITHUB_TOKEN
+  skip-cleanup: true
+  keep-history: false
+  local-dir: public
+  email: 
+  on:
+    branch: master
