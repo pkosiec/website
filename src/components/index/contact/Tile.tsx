@@ -23,7 +23,7 @@ export const Tile = styled("li")<TileProps>`
   text-align: center;
   border: 1px solid
     ${props =>
-      props.highlighted ? props.theme.textColor : props.theme.borderColor};
+      props.highlighted ? props.theme.tileColor : props.theme.borderColor};
   transition: all ease-out 0.15s;
 
   &:hover {
@@ -65,6 +65,6 @@ export const TileLink = styled.a`
   display: block;
   text-align: center;
   text-decoration: none;
-  color: ${props => props.theme.textColor};
+  color: ${props => props.theme.tileColor};
   transition: color ease-out 0.15s;
 `;

@@ -6,8 +6,7 @@ import { Metadata } from "@components/layout/default/Metadata";
 import { Header } from "@components/layout/default/Header";
 import { GlobalStyles } from "@components/layout/default/GlobalStyles";
 import { TopBorder } from "@components/layout/default/TopBorder";
-import { ThemeProvider } from "@config/styled";
-import { darkTheme } from "@config/themes";
+import { ThemeWrapper } from "./theme/ThemeWrapper";
 
 const query = graphql`
   query LayoutQuery {
@@ -48,7 +47,7 @@ export const DefaultLayout: React.FunctionComponent<DefaultLayoutProps> = ({
       const authorName = author.name;
 
       return (
-        <ThemeProvider theme={darkTheme}>
+        <ThemeWrapper>
           <>
             <GlobalStyles />
             <TopBorder />
@@ -63,7 +62,7 @@ export const DefaultLayout: React.FunctionComponent<DefaultLayoutProps> = ({
             <main>{children}</main>
             <Footer text={copyright} />
           </>
-        </ThemeProvider>
+        </ThemeWrapper>
       );
     }}
   />
