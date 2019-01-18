@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import * as React from "react";
+import styled from "@config/styled";
 
 import { SocialTile } from "./SocialTile";
 import { Section } from "../../layout/shared/Section";
