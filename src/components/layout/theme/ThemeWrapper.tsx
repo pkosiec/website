@@ -3,6 +3,7 @@ import { themes } from "@config/themes";
 import { ThemeProvider } from "@config/styled";
 import { ThemeSwitcher } from "./ThemeSwitcher";
 import { RelativeWrapper } from "../shared/RelativeWrapper";
+import { ThemeSwitcherContext } from "./ThemeSwitcher.context";
 
 interface ThemeWrapperProps {}
 
@@ -67,18 +68,18 @@ export class ThemeWrapper extends React.Component<
       return null;
     }
 
+    const contextValue = {
+      themesCount: themes.length,
+      nextTheme: themes[nextThemeIndex],
+      toggleTheme: () => this.toggleTheme(nextThemeIndex),
+    };
+
     return (
-      <RelativeWrapper>
-        {themes.length > 1 && (
-          <ThemeSwitcher
-            toggleTheme={() => this.toggleTheme(nextThemeIndex)}
-            nextTheme={themes[nextThemeIndex]}
-          />
-        )}
+      <ThemeSwitcherContext.Provider value={contextValue}>
         <ThemeProvider theme={themes[currentThemeIndex]}>
           <>{children}</>
         </ThemeProvider>
-      </RelativeWrapper>
+      </ThemeSwitcherContext.Provider>
     );
   };
 }

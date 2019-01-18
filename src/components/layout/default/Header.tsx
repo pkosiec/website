@@ -5,6 +5,7 @@ import logo from "../../../assets/logo.svg";
 import { Content } from "../shared/Content";
 import { Logo } from "./Logo";
 import { Link } from "gatsby";
+import { ThemeSwitcher } from "../theme/ThemeSwitcher";
 
 interface HeaderProps {
   logoAltText: string;
@@ -21,5 +22,7 @@ export const Header: React.FunctionComponent<HeaderProps> = ({
     <BlockLink to="/" title={logoAltText}>
       <Logo />
     </BlockLink>
+
+    <ThemeSwitcher />
   </Content>
 );
