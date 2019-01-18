@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "@config/styled";
 import { media } from "../../../config/responsive";
 
 const DEFAULT_TILE_DIMENSION = "100px";
@@ -21,24 +21,28 @@ export const Tile = styled("li")<TileProps>`
   line-height: ${props =>
     props.lineHeight ? props.lineHeight : DEFAULT_TILE_DIMENSION};
   text-align: center;
-  border: 1px solid ${props => (props.highlighted ? "#e5e5e5" : "#2b2b2b")};
+  border: 1px solid
+    ${props =>
+      props.highlighted ? props.theme.textColor : props.theme.borderColor};
   transition: all ease-out 0.15s;
 
   &:hover {
-    border-color: ${props => (props.highlighted ? "#ffcc00" : "#504e4e")};
+    border-color: ${props =>
+      props.highlighted ? props.theme.accentColor : props.theme.borderActive};
     ${props =>
       props.highlighted &&
       `
     > * {
-      color: #ffcc00;
+      color: ${props.theme.accentColor};
     }
     `}
   }
 
   &:focus,
   &:active {
-    border-color: ${props => (props.highlighted ? "#ffcc00" : "#585656")};
-    background: #2b2b2b;
+    border-color: ${props =>
+      props.highlighted ? props.theme.accentColor : props.theme.borderActive};
+    background: ${props => props.theme.backgroundActive};
 
     span {
       opacity: 1;
@@ -61,6 +65,6 @@ export const TileLink = styled.a`
   display: block;
   text-align: center;
   text-decoration: none;
-  color: #fff;
+  color: ${props => props.theme.textColor};
   transition: color ease-out 0.15s;
 `;

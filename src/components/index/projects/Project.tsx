@@ -11,7 +11,6 @@ const LinkBlock = styled.a`
   display: block;
   padding: 15px;
   text-decoration: none;
-  color: #fff;
 `;
 
 const Header = styled.h3``;

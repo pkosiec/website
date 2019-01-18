@@ -1,17 +1,15 @@
-import styled from "styled-components";
-
-import { ACCENT_COLOR } from "../../../config/colors";
+import styled from "@config/styled";
 
 export const Link = styled.a`
-  color: #fff;
+  color: ${props => props.theme.textColor};
   text-decoration: none;
-  border-bottom: 1px dotted #fff;
+  border-bottom: 1px dotted ${props => props.theme.textColor};
   transition: all ease-out 0.15s;
 
   &:hover,
   &:focus {
-    color: ${ACCENT_COLOR};
-    border-bottom: 1px dotted ${ACCENT_COLOR};
+    color: ${props => props.theme.accentColor};
+    border-bottom: 1px dotted ${props => props.theme.accentColor};
   }
 
   &:active {

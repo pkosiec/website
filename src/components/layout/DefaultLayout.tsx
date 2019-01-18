@@ -1,11 +1,13 @@
-import React from "react";
+import * as React from "react";
 import { StaticQuery, graphql } from "gatsby";
 
-import { Footer } from "./default/Footer";
-import { Metadata } from "./default/Metadata";
-import { Header } from "./default/Header";
-import { GlobalStyles } from "./default/GlobalStyles";
-import { TopBorder } from "./default/TopBorder";
+import { Footer } from "@components/layout/default/Footer";
+import { Metadata } from "@components/layout/default/Metadata";
+import { Header } from "@components/layout/default/Header";
+import { GlobalStyles } from "@components/layout/default/GlobalStyles";
+import { TopBorder } from "@components/layout/default/TopBorder";
+import { ThemeProvider } from "@config/styled";
+import { darkTheme } from "@config/themes";
 
 const query = graphql`
   query LayoutQuery {
@@ -46,20 +48,22 @@ export const DefaultLayout: React.FunctionComponent<DefaultLayoutProps> = ({
       const authorName = author.name;
 
       return (
-        <>
-          <GlobalStyles />
-          <TopBorder />
-          <Metadata
-            title={metadataTitle}
-            description={description}
-            copyright={copyright}
-            authorName={authorName}
-            keywords={keywords}
-          />
-          <Header logoAltText={authorName} />
-          <main>{children}</main>
-          <Footer text={copyright} />
-        </>
+        <ThemeProvider theme={darkTheme}>
+          <>
+            <GlobalStyles />
+            <TopBorder />
+            <Metadata
+              title={metadataTitle}
+              description={description}
+              copyright={copyright}
+              authorName={authorName}
+              keywords={keywords}
+            />
+            <Header logoAltText={authorName} />
+            <main>{children}</main>
+            <Footer text={copyright} />
+          </>
+        </ThemeProvider>
       );
     }}
   />

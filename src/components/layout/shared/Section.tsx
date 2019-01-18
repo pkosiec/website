@@ -1,7 +1,6 @@
-import React from "react";
-import styled from "styled-components";
+import * as React from "react";
+import styled from "@config/styled";
 
-import { BACKGROUND_COLOR } from "../../../config/colors";
 import { Content } from "./Content";
 
 interface SectionWrapperProps {
@@ -11,10 +10,10 @@ interface SectionWrapperProps {
 
 const SectionWrapper = styled("section")<SectionWrapperProps>`
   width: 100%;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid ${props => props.theme.borderColor};
   min-height: ${props => (props.minHeight ? props.minHeight : "auto")};
   background: ${props =>
-    props.background ? props.background : BACKGROUND_COLOR};
+    props.background ? props.background : props.theme.backgroundColor};
   display: flex;
   align-items: center;
   justify-content: center;
