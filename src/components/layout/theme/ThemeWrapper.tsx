@@ -1,26 +1,48 @@
 import * as React from "react";
 import { themes } from "@config/themes";
-import styled, { ThemeProvider } from "@config/styled";
+import { ThemeProvider } from "@config/styled";
 import { ThemeSwitcher } from "./ThemeSwitcher";
 import { RelativeWrapper } from "../shared/RelativeWrapper";
 
 interface ThemeWrapperProps {}
 
 interface ThemeWrapperState {
-  currentThemeIndex: number;
+  currentThemeIndex: number | null;
 }
 
 export class ThemeWrapper extends React.Component<
   ThemeWrapperProps,
   ThemeWrapperState
 > {
+  static THEME_KEY = "theme";
+
   state = {
-    currentThemeIndex: 0,
-    nextThemeIndex: 0,
+    currentThemeIndex: null,
   };
 
+  componentDidMount() {
+    const savedTheme = localStorage.getItem(ThemeWrapper.THEME_KEY);
+    if (!savedTheme) {
+      return;
+    }
+
+    const savedThemeIndex = Number(savedTheme);
+    if (savedThemeIndex >= themes.length) {
+      // invalid value
+      localStorage.removeItem(ThemeWrapper.THEME_KEY);
+    }
+
+    this.setState({
+      currentThemeIndex: savedThemeIndex,
+    });
+  }
+
   evaluateNextThemeIndex = () => {
-    let nextTheme = this.state.currentThemeIndex + 1;
+    if (this.state.currentThemeIndex === null) {
+      return 0;
+    }
+
+    let nextTheme = this.state.currentThemeIndex! + 1;
     if (nextTheme >= themes.length) {
       nextTheme = 0;
     }
@@ -29,6 +51,8 @@ export class ThemeWrapper extends React.Component<
   };
 
   toggleTheme = (nextThemeIndex: number) => {
+    localStorage.setItem(ThemeWrapper.THEME_KEY, nextThemeIndex.toString());
+
     this.setState({
       currentThemeIndex: nextThemeIndex,
     });
@@ -38,6 +62,10 @@ export class ThemeWrapper extends React.Component<
     const { children } = this.props;
     const { currentThemeIndex } = this.state;
     const nextThemeIndex = this.evaluateNextThemeIndex();
+
+    if (currentThemeIndex === null) {
+      return null;
+    }
 
     return (
       <RelativeWrapper>

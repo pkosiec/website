@@ -21,11 +21,11 @@ const darkTheme: Theme = {
 const lightTheme: Theme = {
   accentColor: "#026cee",
   backgroundColor: "#fff",
-  backgroundActive: "#e5e5e5",
+  backgroundActive: "#e7e7e7",
   textColor: "#1a1a1a",
   tileColor: "#1a1a1a",
-  borderColor: "#f6f6f6",
+  borderColor: "#f5f5f5",
   borderActive: "#e5e5e5",
 };
 
-export const themes: Theme[] = [darkTheme, lightTheme];
+export const themes: Theme[] = [lightTheme, darkTheme];
