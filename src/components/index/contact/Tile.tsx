@@ -3,7 +3,15 @@ import { media } from "../../../config/responsive";
 
 const DEFAULT_TILE_DIMENSION = "100px";
 
-export const Tile = styled.li`
+interface TileProps {
+  width?: string;
+  height?: string;
+  lineHeight?: string;
+  highlighted?: boolean;
+  big?: boolean;
+}
+
+export const Tile = styled("li")<TileProps>`
   width: ${props => (props.width ? props.width : DEFAULT_TILE_DIMENSION)};
   height: ${props => (props.height ? props.height : DEFAULT_TILE_DIMENSION)};
   display: inline-block;
@@ -42,7 +50,7 @@ export const Tile = styled.li`
   }
 
   ${media.phone`
-  width: calc(${props => (props.big ? "100%" : "50%")} - 30px);
+    width: calc(${(props: TileProps) => (props.big ? "100%" : "50%")} - 30px);
   `}
 `;
 

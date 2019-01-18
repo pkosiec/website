@@ -2,7 +2,13 @@ import React from "react";
 import { Section } from "../../layout/shared/Section";
 import { Project } from "./Project";
 
-const Projects = ({ projects = [] }) => {
+interface ProjectsProps {
+  projects: Project[];
+}
+
+const Projects: React.FunctionComponent<ProjectsProps> = ({
+  projects = [],
+}) => {
   return (
     <Section>
       <h1>Featured projects</h1>

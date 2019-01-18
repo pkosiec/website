@@ -4,10 +4,15 @@ import styled from "styled-components";
 import { BACKGROUND_COLOR } from "../../../config/colors";
 import { Content } from "./Content";
 
-const SectionWrapper = styled.section`
+interface SectionWrapperProps {
+  minHeight?: string;
+  background?: string;
+}
+
+const SectionWrapper = styled("section")<SectionWrapperProps>`
   width: 100%;
   border-bottom: 1px solid #333;
-  min-height: ${props => (props.height ? props.height : "auto")};
+  min-height: ${props => (props.minHeight ? props.minHeight : "auto")};
   background: ${props =>
     props.background ? props.background : BACKGROUND_COLOR};
   display: flex;
@@ -15,18 +20,23 @@ const SectionWrapper = styled.section`
   justify-content: center;
 `;
 
-export const Section = ({
+interface SectionProps {
+  height?: string;
+  background?: string;
+  className?: string;
+  minHeight?: string;
+}
+
+export const Section: React.FunctionComponent<SectionProps> = ({
   className,
   background,
-  borderColor,
-  height,
+  minHeight,
   children,
 }) => (
   <SectionWrapper
     className={className}
     background={background}
-    borderColor={borderColor}
-    height={height}
+    minHeight={minHeight}
   >
     <Content>{children}</Content>
   </SectionWrapper>

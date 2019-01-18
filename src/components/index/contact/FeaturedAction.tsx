@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { Tile, TileLink } from "./Tile";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 const Icon = styled(FontAwesomeIcon)`
   position: absolute;
@@ -20,11 +21,23 @@ const Caption = styled.p`
   margin: 0 0 0 25px;
 `;
 
-export const ContactAction = ({ email }) => (
+interface FeaturedActionProps {
+  link: string;
+  text: string;
+  iconName: string;
+  iconPrefix?: string;
+}
+
+export const FeaturedAction: React.FunctionComponent<FeaturedActionProps> = ({
+  link,
+  text,
+  iconName,
+  iconPrefix = "fa",
+}) => (
   <Tile big width="250px" lineHeight="70px" highlighted as="li">
-    <TileLink href={`mailto:${email}`}>
-      <Icon size="2x" icon="envelope" />
-      <Caption>Get in touch</Caption>
+    <TileLink href={link}>
+      <Icon size="2x" icon={[iconPrefix, iconName] as IconProp} />
+      <Caption>{text}</Caption>
     </TileLink>
   </Tile>
 );
