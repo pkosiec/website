@@ -1,7 +1,13 @@
 import React from "react";
 import Helmet from "react-helmet";
 
-export const Metadata = ({ title, description, authorName, copyright }) => {
+export const Metadata = ({
+  title,
+  description,
+  authorName,
+  keywords,
+  copyright,
+}) => {
   return (
     <Helmet
       htmlAttributes={{
@@ -51,8 +57,7 @@ export const Metadata = ({ title, description, authorName, copyright }) => {
         },
         {
           name: "keywords",
-          content:
-            "fullstack,frontend,backend,developer,golang,javascript,react",
+          content: keywords,
         },
       ]}
     />

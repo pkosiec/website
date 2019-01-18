@@ -6,6 +6,7 @@ module.exports = {
     title: `Paweł Kosiec, Full-stack Developer`,
     author: package.author,
     copyright: `©2012-${new Date().getFullYear()} Paweł Kosiec`,
+    keywords: "fullstack,frontend,backend,developer,golang,javascript,react",
     description:
       "I am software developer interested in technology and gadgets. Cloud-native and open-source enthusiast.",
     socialMedia: [

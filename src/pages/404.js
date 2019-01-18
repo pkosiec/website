@@ -6,7 +6,7 @@ import { Link } from "../components/layout/shared/Link";
 import { Paragraph } from "../components/layout/shared/Paragraph";
 
 const NotFoundPage = () => (
-  <DefaultLayout>
+  <DefaultLayout pageTitle="404">
     <Section>
       <Headline1>The page you're trying to reach doesn't exist.</Headline1>
       <Paragraph>

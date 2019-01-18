@@ -14,6 +14,7 @@ const query = graphql`
         title
         description
         copyright
+        keywords
         author {
           name
         }
@@ -26,7 +27,13 @@ export const DefaultLayout = ({ pageTitle, children }) => (
   <StaticQuery
     query={query}
     render={data => {
-      const { title, description, copyright, author } = data.site.siteMetadata;
+      const {
+        title,
+        description,
+        copyright,
+        author,
+        keywords,
+      } = data.site.siteMetadata;
 
       const metadataTitle = pageTitle ? `${pageTitle} - ${title}` : title;
       const authorName = author.name;
@@ -40,6 +47,7 @@ export const DefaultLayout = ({ pageTitle, children }) => (
             description={description}
             copyright={copyright}
             authorName={authorName}
+            keywords={keywords}
           />
           <Header authorName={authorName} />
           <main>{children}</main>

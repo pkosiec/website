@@ -19,6 +19,7 @@ const TextWrapper = styled.div`
   `}
 `;
 
+//TODO: Remove hardcoded text and read content from Markdown
 export const About = () => (
   <Section>
     <TextWrapper>
@@ -33,7 +34,7 @@ export const About = () => (
         </Link>
         , an open source project. I&nbsp;write back-end services in{" "}
         <Highlight>Go</Highlight>, and modern front-ends using{" "}
-        <Highlight>React.js</Highlight>. I&nbsp;work in Cloud-native
+        <Highlight>React.js</Highlight>. I&nbsp;work in cloud-native
         environment, associated with <Highlight>microservices</Highlight> and
         extending <Highlight>Kubernetes</Highlight>.
       </Paragraph>
@@ -42,12 +43,12 @@ export const About = () => (
         Silesian University of Technology.
       </Paragraph>
       <Paragraph>
-        I'm open source and Cloud Native enthusiast. That's why I'm
+        I'm open source and cloud-native enthusiast. That's why I'm
         an&nbsp;co-organizer of the&nbsp;
-        <Link href="https://www.meetup.com/GophersSilesia">
+        <Link href="https://www.meetup.com/GophersSilesia" target="_blank">
           Gophers Silesia
         </Link>{" "}
-        meetup, which is a local community interested in Go & Cloud Native
+        meetup, which is a local community interested in Go & cloud-native
         topics.
       </Paragraph>
     </TextWrapper>
