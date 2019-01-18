@@ -22,7 +22,7 @@ const TextWrapper = styled.div`
 
 //TODO: Remove hardcoded text and read content from Markdown
 export const About: React.FunctionComponent = () => (
-  <Section>
+  <Section noBorder>
     <TextWrapper>
       <Headline1>Hi. I'm Paweł Kosiec.</Headline1>
       <Paragraph>

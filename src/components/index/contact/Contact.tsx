@@ -25,9 +25,10 @@ export const Contact: React.FunctionComponent<ContactProps> = ({
   socialMedia,
   email,
 }) => (
-  <Section>
+  <Section border>
     <TileList>
       <FeaturedAction
+        showCaption
         text="Get in touch"
         link={`mailto:${email}`}
         iconName="envelope"

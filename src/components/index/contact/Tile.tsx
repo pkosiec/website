@@ -1,7 +1,7 @@
 import styled from "@config/styled";
 import { media } from "../../../config/responsive";
 
-const DEFAULT_TILE_DIMENSION = "100px";
+const DEFAULT_TILE_DIMENSION = "75px";
 
 interface TileProps {
   width?: string;
@@ -18,12 +18,12 @@ export const Tile = styled("li")<TileProps>`
   position: relative;
   margin: 15px;
   vertical-align: middle;
-  line-height: ${props =>
-    props.lineHeight ? props.lineHeight : DEFAULT_TILE_DIMENSION};
+  line-height: ${props => (props.lineHeight ? props.lineHeight : "45px")};
   text-align: center;
   border: 1px solid
     ${props =>
-      props.highlighted ? props.theme.tileColor : props.theme.borderColor};
+      props.highlighted ? props.theme.tileColor : props.theme.tileBorderColor};
+  border-radius: 999px;
   transition: all ease-out 0.15s;
 
   &:hover {

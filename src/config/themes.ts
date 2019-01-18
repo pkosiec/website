@@ -4,6 +4,7 @@ export interface Theme {
   accentColor: string;
   textColor: string;
   tileColor: string;
+  tileBorderColor: string;
   borderColor: string;
   borderActive: string;
 }
@@ -14,6 +15,7 @@ const darkTheme: Theme = {
   backgroundActive: "#2b2b2b",
   textColor: "#fff",
   tileColor: "#fff",
+  tileBorderColor: "transparent",
   borderColor: "#2b2b2b",
   borderActive: "#504e4e",
 };
@@ -24,7 +26,8 @@ const lightTheme: Theme = {
   backgroundActive: "#e7e7e7",
   textColor: "#1a1a1a",
   tileColor: "#1a1a1a",
-  borderColor: "#f5f5f5",
+  tileBorderColor: "transparent",
+  borderColor: "#e5e5e5",
   borderActive: "#e5e5e5",
 };
 

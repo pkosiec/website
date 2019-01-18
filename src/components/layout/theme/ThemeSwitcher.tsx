@@ -43,8 +43,11 @@ export const ThemeSwitcher: React.FunctionComponent<
 > = ({}) => {
   const label = "Switch Theme";
 
-  const shouldRenderThemeSwitcher = (ctx: ThemeSwitcherType) => {
-    return ctx.themesCount > 0 && ctx.nextTheme !== null;
+  const shouldRenderThemeSwitcher = ({
+    themesCount,
+    nextTheme,
+  }: ThemeSwitcherType) => {
+    return themesCount > 0 && nextTheme !== null;
   };
 
   return (
