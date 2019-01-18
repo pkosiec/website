@@ -16,7 +16,18 @@ const LinkBlock = styled.a`
 
 const Header = styled.h3``;
 
-export const Project = ({ project }) => {
+export interface Project {
+  title: string;
+  description: string;
+  link: string;
+  image: string;
+}
+
+interface ProjectProps {
+  project: Project;
+}
+
+export const Project: React.FunctionComponent<ProjectProps> = ({ project }) => {
   return (
     <Box>
       <LinkBlock href={project.link}>

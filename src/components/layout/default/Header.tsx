@@ -13,8 +13,14 @@ const Logo = styled.img`
   display: block;
 `;
 
-export const Header = ({ authorName }) => (
+interface HeaderProps {
+  logoAltText: string;
+}
+
+export const Header: React.FunctionComponent<HeaderProps> = ({
+  logoAltText,
+}) => (
   <Content as="header" padding="40px 40px 0 40px">
-    <Logo src={logo} alt={authorName} />
+    <Logo src={logo} alt={logoAltText} />
   </Content>
 );

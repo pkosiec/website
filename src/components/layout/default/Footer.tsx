@@ -13,7 +13,11 @@ const FooterText = styled.p`
   font-size: 0.7rem;
 `;
 
-export const Footer = ({ text }) => (
+interface FooterProps {
+  text: string;
+}
+
+export const Footer: React.FunctionComponent<FooterProps> = ({ text }) => (
   <StyledFooter>
     <Content>
       <FooterText>{text}</FooterText>

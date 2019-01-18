@@ -23,7 +23,14 @@ const query = graphql`
   }
 `;
 
-export const DefaultLayout = ({ pageTitle, children }) => (
+interface DefaultLayoutProps {
+  pageTitle?: string;
+}
+
+export const DefaultLayout: React.FunctionComponent<DefaultLayoutProps> = ({
+  pageTitle,
+  children,
+}) => (
   <StaticQuery
     query={query}
     render={data => {
@@ -49,7 +56,7 @@ export const DefaultLayout = ({ pageTitle, children }) => (
             authorName={authorName}
             keywords={keywords}
           />
-          <Header authorName={authorName} />
+          <Header logoAltText={authorName} />
           <main>{children}</main>
           <Footer text={copyright} />
         </>

@@ -1,7 +1,15 @@
 import React from "react";
 import Helmet from "react-helmet";
 
-export const Metadata = ({
+interface MetadataProps {
+  title: string;
+  description: string;
+  authorName: string;
+  keywords: string;
+  copyright: string;
+}
+
+export const Metadata: React.FunctionComponent<MetadataProps> = ({
   title,
   description,
   authorName,
