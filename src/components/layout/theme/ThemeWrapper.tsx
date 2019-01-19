@@ -4,14 +4,14 @@ import { ThemeProvider } from "@config/styled";
 import { ThemeSwitcherContext } from "@components/layout/theme/ThemeSwitcher.context";
 
 interface ThemeWrapperState {
-  currentThemeIndex: number | null;
+  currentThemeIndex: number;
 }
 
 export class ThemeWrapper extends React.Component<{}, ThemeWrapperState> {
   static THEME_KEY = "theme";
 
   state = {
-    currentThemeIndex: null,
+    currentThemeIndex: 0,
   };
 
   componentDidMount() {
@@ -35,10 +35,6 @@ export class ThemeWrapper extends React.Component<{}, ThemeWrapperState> {
   }
 
   evaluateNextThemeIndex = () => {
-    if (this.state.currentThemeIndex === null) {
-      return 0;
-    }
-
     let nextTheme = this.state.currentThemeIndex! + 1;
     if (nextTheme >= themes.length) {
       nextTheme = 0;
@@ -59,10 +55,6 @@ export class ThemeWrapper extends React.Component<{}, ThemeWrapperState> {
     const { children } = this.props;
     const { currentThemeIndex } = this.state;
     const nextThemeIndex = this.evaluateNextThemeIndex();
-
-    if (currentThemeIndex === null) {
-      return null;
-    }
 
     const contextValue = {
       themesCount: themes.length,

@@ -1,5 +1,6 @@
 import * as React from "react";
 import Helmet from "react-helmet";
+import { withPrefix } from "gatsby";
 
 interface MetadataProps {
   title: string;
@@ -16,6 +17,9 @@ export const Metadata: React.FunctionComponent<MetadataProps> = ({
   keywords,
   copyright,
 }) => {
+  const host = process.env.GATSBY_SITE_URL || "";
+  const logoPath = `${host}${withPrefix("/logo-metadata.png")}`;
+
   return (
     <Helmet
       htmlAttributes={{
@@ -54,6 +58,14 @@ export const Metadata: React.FunctionComponent<MetadataProps> = ({
         {
           name: "twitter:description",
           content: description,
+        },
+        {
+          name: "twitter:image",
+          content: logoPath,
+        },
+        {
+          name: "og:image",
+          content: logoPath,
         },
         {
           name: "copyright",
