@@ -1,11 +1,12 @@
-import React from "react";
-import styled from "styled-components";
-import { Section } from "../../layout/shared/Section";
-import { media } from "../../../config/responsive";
-import { Paragraph } from "../../layout/shared/Paragraph";
-import { Highlight } from "../../layout/shared/Highlight";
-import { Link } from "../../layout/shared/Link";
-import { Headline1 } from "../../layout/shared/Headline";
+import * as React from "react";
+
+import styled from "@config/styled";
+import { media } from "@config/responsive";
+import { Section } from "@components/layout/shared/Section";
+import { Paragraph } from "@components/layout/shared/Paragraph";
+import { Highlight } from "@components/layout/shared/Highlight";
+import { Link } from "@components/layout/shared/Link";
+import { Headline1 } from "@components/layout/shared/Headline";
 
 const TextWrapper = styled.div`
   max-width: 65%;
@@ -21,7 +22,7 @@ const TextWrapper = styled.div`
 
 //TODO: Remove hardcoded text and read content from Markdown
 export const About: React.FunctionComponent = () => (
-  <Section>
+  <Section noBorder>
     <TextWrapper>
       <Headline1>Hi. I'm Paweł Kosiec.</Headline1>
       <Paragraph>

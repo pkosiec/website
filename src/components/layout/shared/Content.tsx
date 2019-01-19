@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "@config/styled";
 
 interface ContentProps {
   padding?: string;

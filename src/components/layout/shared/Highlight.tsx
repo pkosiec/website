@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "@config/styled";
 
 export const Highlight = styled.span`
   font-weight: bold;

@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import * as React from "react";
+import styled from "@config/styled";
 
 import { SocialTile } from "./SocialTile";
 import { Section } from "../../layout/shared/Section";
@@ -25,9 +25,10 @@ export const Contact: React.FunctionComponent<ContactProps> = ({
   socialMedia,
   email,
 }) => (
-  <Section>
+  <Section border>
     <TileList>
       <FeaturedAction
+        showCaption
         text="Get in touch"
         link={`mailto:${email}`}
         iconName="envelope"

@@ -1,10 +1,10 @@
 import * as React from "react";
 
-import { DefaultLayout } from "../components/layout/DefaultLayout";
-import { Section } from "../components/layout/shared/Section";
-import { Headline1 } from "../components/layout/shared/Headline";
-import { Link } from "../components/layout/shared/Link";
-import { Paragraph } from "../components/layout/shared/Paragraph";
+import { DefaultLayout } from "@components/layout/DefaultLayout";
+import { Section } from "@components/layout/shared/Section";
+import { Headline1 } from "@components/layout/shared/Headline";
+import { Link } from "@components/layout/shared/Link";
+import { Paragraph } from "@components/layout/shared/Paragraph";
 
 const NotFoundPage: React.FunctionComponent = () => (
   <DefaultLayout pageTitle="404">

@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import * as React from "react";
+import styled from "@config/styled";
 import { Content } from "../shared/Content";
 
 const StyledFooter = styled.footer`
@@ -9,7 +9,7 @@ const StyledFooter = styled.footer`
 const FooterText = styled.p`
   padding: 0px 0;
   margin: 0;
-  color: #ccc;
+  color: ${props => props.theme.textColor};
   font-size: 0.7rem;
 `;
 

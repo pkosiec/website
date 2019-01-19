@@ -1,11 +1,10 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from "@config/styled";
 import "normalize.css";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 
-import { BACKGROUND_COLOR } from "../../../config/colors";
-
 export const GlobalStyles = createGlobalStyle`
-  body {
-    background: ${BACKGROUND_COLOR};
+  html body {
+    background: ${props => props.theme.backgroundColor};
+    color: ${props => props.theme.textColor};
   }
 `;

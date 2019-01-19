@@ -1,26 +1,28 @@
-import React from "react";
-import styled from "styled-components";
+import * as React from "react";
+import styled from "@config/styled";
 
 import logo from "../../../assets/logo.svg";
 import { Content } from "../shared/Content";
-
-const LOGO_DIMENSION = 75;
-
-const Logo = styled.img`
-  width: ${LOGO_DIMENSION}px;
-  height: ${LOGO_DIMENSION}px;
-  margin: 0;
-  display: block;
-`;
+import { Logo } from "./Logo";
+import { Link } from "gatsby";
+import { ThemeSwitcher } from "../theme/ThemeSwitcher";
 
 interface HeaderProps {
   logoAltText: string;
 }
 
+const BlockLink = styled(Link)`
+  display: inline-block;
+`;
+
 export const Header: React.FunctionComponent<HeaderProps> = ({
   logoAltText,
 }) => (
   <Content as="header" padding="40px 40px 0 40px">
-    <Logo src={logo} alt={logoAltText} />
+    <BlockLink to="/" title={logoAltText}>
+      <Logo />
+    </BlockLink>
+
+    <ThemeSwitcher />
   </Content>
 );

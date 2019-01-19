@@ -1,15 +1,9 @@
+import { css } from "@config/styled";
 import {
-  css,
   CSSObject,
   SimpleInterpolation,
-  FlattenSimpleInterpolation,
   ThemedCssFunction,
-  BaseThemedCssFunction,
-  InterpolationFunction,
-  ThemedStyledProps,
-  Interpolation,
 } from "styled-components";
-import { any } from "prop-types";
 
 enum Sizes {
   PHONE = "phone",
