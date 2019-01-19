@@ -1,13 +1,12 @@
 import * as React from "react";
-
 import styled from "@config/styled";
-import { Theme } from "@config/themes";
-import { Circle } from "./ThemeCircle";
-import { RelativeWrapper } from "../shared/RelativeWrapper";
+
+import { Circle } from "@components/layout/theme/ThemeCircle";
+import { RelativeWrapper } from "@components/layout/shared/RelativeWrapper";
 import {
   ThemeSwitcherContext,
   ThemeSwitcherType,
-} from "./ThemeSwitcher.context";
+} from "@components/layout/theme/ThemeSwitcher.context";
 
 const Switcher = styled.button`
   appearance: none;
@@ -36,11 +35,7 @@ const Switcher = styled.button`
   }
 `;
 
-interface ThemeSwitcherProps {}
-
-export const ThemeSwitcher: React.FunctionComponent<
-  ThemeSwitcherProps
-> = ({}) => {
+export const ThemeSwitcher: React.FunctionComponent = ({}) => {
   const label = "Switch Theme";
 
   const shouldRenderThemeSwitcher = ({

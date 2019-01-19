@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "@config/styled";
 
-import { Content } from "./Content";
+import { Content } from "@components/layout/shared/Content";
 
 interface SectionWrapperProps {
   minHeight?: string;

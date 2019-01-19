@@ -1,12 +1,12 @@
 import * as React from "react";
 import styled from "@config/styled";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { TileLink, Tile } from "./Tile";
 import {
   IconPrefix,
   IconName,
   IconProp,
 } from "@fortawesome/fontawesome-svg-core";
+import { TileLink, Tile } from "@components/index/contact/Tile";
 
 const Icon = styled(FontAwesomeIcon)`
   position: absolute;

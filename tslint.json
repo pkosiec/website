@@ -1,15 +1,15 @@
 {
   "defaultSeverity": "error",
-  "extends": ["tslint:latest", "tslint-react", "tslint-config-prettier"],
-  "jsRules": {},
+  "extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier"],
   "rules": {
-    "interface-name": false,
-    "semicolon": [true, "never"],
-    "member-access": [false],
-    "ordered-imports": [true],
-    "no-console": [false],
-    "no-var-requires": true,
-    "quotemark": [true, "double", "jsx-double"]
+    "arrow-parens": [true, "ban-single-arg-parens"],
+    "interface-name": [true, "never-prefix"],
+    "member-access": [true, "no-public"],
+    "no-console": [true, "log", "info"],
+    "no-unused-expression": true,
+    "object-literal-sort-keys": false,
+    "ordered-imports": false,
+    "unified-signatures": false
   },
-  "rulesDirectory": []
+  "jsRules": {}
 }

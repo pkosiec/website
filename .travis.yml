@@ -5,6 +5,7 @@ node_js:
 before_script:
   - npm install --no-optional
 script:
+  - npm run lint
   - npm run build
 
 deploy:

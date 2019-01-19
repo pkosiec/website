@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled, { withTheme } from "@config/styled";
-import { Theme } from "../../../config/themes";
+import { Theme } from "@config/themes";
 
 const LOGO_DIMENSION = 75;
 

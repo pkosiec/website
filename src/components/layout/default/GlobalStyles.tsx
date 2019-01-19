@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "@config/styled";
-import "normalize.css";
 import "@fortawesome/fontawesome-svg-core/styles.css";
+import "normalize.css";
 
 export const GlobalStyles = createGlobalStyle`
   html body {

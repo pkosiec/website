@@ -1,9 +1,9 @@
 import * as React from "react";
 import styled from "@config/styled";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-import { Tile, TileLink } from "./Tile";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
+
+import { Tile, TileLink } from "@components/index/contact/Tile";
 
 const Icon = styled(({ captionVisible, ...props }) => (
   <FontAwesomeIcon {...props} />
@@ -43,7 +43,7 @@ export const FeaturedAction: React.FunctionComponent<FeaturedActionProps> = ({
   const tileWidth = showCaption ? "240px" : undefined;
 
   return (
-    <Tile big={bigTile} width={tileWidth} highlighted as="li">
+    <Tile big={bigTile} width={tileWidth} highlighted={true} as="li">
       <TileLink href={link} title={text}>
         <Icon
           captionVisible={showCaption}

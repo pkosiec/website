@@ -1,6 +1,6 @@
 import * as React from "react";
-import { Section } from "../../layout/shared/Section";
-import { Project } from "./Project";
+import { Section } from "@components/layout/shared/Section";
+import { Project } from "@components/index/projects/Project";
 
 interface ProjectsProps {
   projects: Project[];

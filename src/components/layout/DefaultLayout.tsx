@@ -6,7 +6,7 @@ import { Metadata } from "@components/layout/default/Metadata";
 import { Header } from "@components/layout/default/Header";
 import { GlobalStyles } from "@components/layout/default/GlobalStyles";
 import { TopBorder } from "@components/layout/default/TopBorder";
-import { ThemeWrapper } from "./theme/ThemeWrapper";
+import { ThemeWrapper } from "@components/layout/theme/ThemeWrapper";
 
 const query = graphql`
   query LayoutQuery {
@@ -34,6 +34,7 @@ export const DefaultLayout: React.FunctionComponent<DefaultLayoutProps> = ({
 }) => (
   <StaticQuery
     query={query}
+    // tslint:disable-next-line jsx-no-lambda
     render={data => {
       const {
         title,

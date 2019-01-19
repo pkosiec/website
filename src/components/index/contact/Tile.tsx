@@ -1,5 +1,5 @@
 import styled from "@config/styled";
-import { media } from "../../../config/responsive";
+import { media } from "@config/responsive";
 
 const DEFAULT_TILE_DIMENSION = "75px";
 

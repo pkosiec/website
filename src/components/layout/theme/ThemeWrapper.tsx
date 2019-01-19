@@ -1,20 +1,13 @@
 import * as React from "react";
 import { themes } from "@config/themes";
 import { ThemeProvider } from "@config/styled";
-import { ThemeSwitcher } from "./ThemeSwitcher";
-import { RelativeWrapper } from "../shared/RelativeWrapper";
-import { ThemeSwitcherContext } from "./ThemeSwitcher.context";
-
-interface ThemeWrapperProps {}
+import { ThemeSwitcherContext } from "@components/layout/theme/ThemeSwitcher.context";
 
 interface ThemeWrapperState {
   currentThemeIndex: number | null;
 }
 
-export class ThemeWrapper extends React.Component<
-  ThemeWrapperProps,
-  ThemeWrapperState
-> {
+export class ThemeWrapper extends React.Component<{}, ThemeWrapperState> {
   static THEME_KEY = "theme";
 
   state = {

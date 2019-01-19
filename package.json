@@ -40,6 +40,7 @@
   "scripts": {
     "start": "npm run develop",
     "build": "gatsby build",
+    "lint": "tslint './src/**/*.ts?(x)'",
     "develop": "gatsby develop",
     "serve": "gatsby serve"
   },
@@ -53,7 +54,7 @@
     "prettier": "^1.15.2",
     "ts-node": "^7.0.1",
     "tslint": "^5.10.0",
-    "tslint-config-prettier": "^1.13.0",
+    "tslint-config-prettier": "^1.17.0",
     "tslint-react": "^3.6.0",
     "typescript": "^3.2.4"
   },

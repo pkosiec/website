@@ -1,9 +1,9 @@
 import * as React from "react";
 import styled from "@config/styled";
 
-import { SocialTile } from "./SocialTile";
-import { Section } from "../../layout/shared/Section";
-import { FeaturedAction } from "./FeaturedAction";
+import { SocialTile } from "@components/index/contact/SocialTile";
+import { Section } from "@components/layout/shared/Section";
+import { FeaturedAction } from "@components/index/contact/FeaturedAction";
 
 const TileList = styled.ul`
   list-style-type: none;
@@ -25,10 +25,10 @@ export const Contact: React.FunctionComponent<ContactProps> = ({
   socialMedia,
   email,
 }) => (
-  <Section border>
+  <Section border={true}>
     <TileList>
       <FeaturedAction
-        showCaption
+        showCaption={true}
         text="Get in touch"
         link={`mailto:${email}`}
         iconName="envelope"

@@ -10,5 +10,5 @@ export interface ThemeSwitcherType {
 export const ThemeSwitcherContext = React.createContext<ThemeSwitcherType>({
   nextTheme: null,
   themesCount: 0,
-  toggleTheme: () => {},
+  toggleTheme: () => null,
 });

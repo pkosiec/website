@@ -1,6 +1,7 @@
 import * as React from "react";
 import styled from "@config/styled";
-import { Content } from "../shared/Content";
+
+import { Content } from "@components/layout/shared/Content";
 
 const StyledFooter = styled.footer`
   width: 100%;
