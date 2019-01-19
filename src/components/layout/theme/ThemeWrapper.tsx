@@ -17,6 +17,9 @@ export class ThemeWrapper extends React.Component<{}, ThemeWrapperState> {
   componentDidMount() {
     const savedTheme = localStorage.getItem(ThemeWrapper.THEME_KEY);
     if (!savedTheme) {
+      this.setState({
+        currentThemeIndex: 0,
+      });
       return;
     }
 
