@@ -23,7 +23,7 @@ const darkTheme: Theme = {
 const lightTheme: Theme = {
   accentColor: "#026cee",
   backgroundColor: "#fff",
-  backgroundActive: "#e7e7e7",
+  backgroundActive: "#e5e5e5",
   textColor: "#1a1a1a",
   tileColor: "#1a1a1a",
   tileBorderColor: "transparent",

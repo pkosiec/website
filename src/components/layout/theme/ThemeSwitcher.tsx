@@ -27,6 +27,15 @@ const Switcher = styled.button`
 
   &:hover {
     border-color: ${props => props.theme.borderActive};
+
+    > div > span {
+      :nth-of-type(1) {
+        left: 6px;
+      }
+      :nth-of-type(2) {
+        left: -6px;
+      }
+    }
   }
 
   &:active {
@@ -52,8 +61,8 @@ export const ThemeSwitcher: React.FunctionComponent = ({}) => {
           <Switcher title={label} onClick={ctx.toggleTheme}>
             <span>{label}</span>
             <RelativeWrapper>
-              <Circle background={ctx.nextTheme!.backgroundColor} left="3px" />
-              <Circle background={ctx.nextTheme!.accentColor} left="-3px" />
+              <Circle background={ctx.nextTheme!.backgroundColor} left={3} />
+              <Circle background={ctx.nextTheme!.accentColor} left={-3} />
             </RelativeWrapper>
           </Switcher>
         )

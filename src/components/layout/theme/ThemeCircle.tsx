@@ -4,10 +4,10 @@ const CIRCLE_DIMENSION_PX = 20;
 
 interface CircleProps {
   background: string;
-  left?: string;
-  right?: string;
-  top?: string;
-  bottom?: string;
+  left?: number;
+  right?: number;
+  top?: number;
+  bottom?: number;
 }
 
 export const Circle = styled("span")<CircleProps>`
@@ -17,8 +17,9 @@ export const Circle = styled("span")<CircleProps>`
   border-radius: ${CIRCLE_DIMENSION_PX}px;
   background: ${props => props.background};
   position: relative;
-  left: ${props => (props.left ? props.left : "0")};
-  right: ${props => (props.right ? props.right : "0")};
-  bottom: ${props => (props.bottom ? props.bottom : "0")};
+  left: ${props => (props.left ? props.left : 0)}px;
+  right: ${props => (props.right ? props.right : 0)}px;
+  bottom: ${props => (props.bottom ? props.bottom : 0)}px;
   top: ${props => (props.top ? props.top : "0")};
+  transition: all ease-out 0.15s;
 `;

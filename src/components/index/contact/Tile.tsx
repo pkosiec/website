@@ -24,7 +24,7 @@ export const Tile = styled("li")<TileProps>`
     ${props =>
       props.highlighted ? props.theme.tileColor : props.theme.tileBorderColor};
   border-radius: 999px;
-  transition: all ease-out 0.15s;
+  transition: all ease-out 0.12s;
 
   &:hover {
     border-color: ${props =>
