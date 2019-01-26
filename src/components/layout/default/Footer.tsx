@@ -12,6 +12,7 @@ const FooterText = styled.p`
   margin: 0;
   color: ${props => props.theme.textColor};
   font-size: 0.7rem;
+  transition: color ease-out 0.15s;
 `;
 
 interface FooterProps {

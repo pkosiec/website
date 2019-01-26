@@ -15,8 +15,8 @@ const SectionWrapper = styled("section")<SectionWrapperProps>`
   border-bottom-style: solid;
   border-bottom-color: ${props => props.theme.borderColor};
   min-height: ${props => (props.minHeight ? props.minHeight : "auto")};
-  background: ${props =>
-    props.background ? props.background : props.theme.backgroundColor};
+  background: ${props => (props.background ? props.background : "transparent")};
+  transition: border-color ease-out 0.15s;
   display: flex;
   align-items: center;
   justify-content: center;

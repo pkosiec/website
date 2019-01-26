@@ -10,7 +10,7 @@ import {
 
 const Switcher = styled.button`
   appearance: none;
-  background: transparent;
+  background-color: transparent;
   margin: 0;
   padding: 10px;
   border-radius: 30px;
@@ -24,6 +24,7 @@ const Switcher = styled.button`
   float: right;
   border: 1px solid transparent;
   transition: all ease-out 0.15s;
+  transition-property: border-color, color, background-color;
 
   &:hover {
     border-color: ${props => props.theme.borderActive};
@@ -39,7 +40,7 @@ const Switcher = styled.button`
   }
 
   &:active {
-    background: ${props => props.theme.backgroundActive};
+    background-color: ${props => props.theme.backgroundActive};
     border-color: ${props => props.theme.borderActive};
   }
 `;

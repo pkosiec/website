@@ -5,6 +5,7 @@ export const Link = styled.a`
   text-decoration: none;
   border-bottom: 1px dotted ${props => props.theme.textColor};
   transition: all ease-out 0.15s;
+  transition-property: color, border-color;
 
   &:hover,
   &:focus {

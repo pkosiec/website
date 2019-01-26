@@ -49,20 +49,18 @@ export const DefaultLayout: React.FunctionComponent<DefaultLayoutProps> = ({
 
       return (
         <ThemeWrapper>
-          <>
-            <GlobalStyles />
-            <TopBorder />
-            <Metadata
-              title={metadataTitle}
-              description={description}
-              copyright={copyright}
-              authorName={authorName}
-              keywords={keywords}
-            />
-            <Header logoAltText={authorName} />
-            <main>{children}</main>
-            <Footer text={copyright} />
-          </>
+          <GlobalStyles />
+          <TopBorder />
+          <Metadata
+            title={metadataTitle}
+            description={description}
+            copyright={copyright}
+            authorName={authorName}
+            keywords={keywords}
+          />
+          <Header logoAltText={authorName} />
+          <main>{children}</main>
+          <Footer text={copyright} />
         </ThemeWrapper>
       );
     }}

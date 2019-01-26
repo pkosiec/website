@@ -4,7 +4,9 @@ import "normalize.css";
 
 export const GlobalStyles = createGlobalStyle`
   html body {
-    background: ${props => props.theme.backgroundColor};
+    background-color: ${props => props.theme.backgroundColor};
     color: ${props => props.theme.textColor};
+    transition: all ease-out 0.15s;
+    transition-property: background-color, color;
   }
 `;
