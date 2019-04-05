@@ -26,21 +26,21 @@ export const About: React.FunctionComponent = () => (
     <TextWrapper>
       <Headline1>Hi. I'm Paweł Kosiec.</Headline1>
       <Paragraph>
-        I'm a Full-stack Developer located in Gliwice, Poland.
+        I'm a&nbsp;Full-stack Developer located in Gliwice, Poland.
       </Paragraph>
       <Paragraph>
         Currently I&nbsp;work at SAP, where I&nbsp;develop{" "}
         <Link href="https://kyma-project.io" target="_blank">
           Kyma
         </Link>
-        , an open source project. I&nbsp;write back-end services in{" "}
+        , an&nbsp;open source project. I&nbsp;write back-end services in{" "}
         <Highlight>Go</Highlight>, and modern front-ends using{" "}
         <Highlight>React.js</Highlight>. I&nbsp;work in cloud-native
         environment, associated with <Highlight>microservices</Highlight> and
         extending <Highlight>Kubernetes</Highlight>.
       </Paragraph>
       <Paragraph>
-        I&nbsp;have recently completed a master's in Computer Science at
+        In 2018 I&nbsp;have completed a&nbsp;master's in Computer Science at
         Silesian University of Technology.
       </Paragraph>
       <Paragraph>
@@ -49,7 +49,7 @@ export const About: React.FunctionComponent = () => (
         <Link href="https://www.meetup.com/GophersSilesia" target="_blank">
           Gophers Silesia
         </Link>{" "}
-        meetup, which is a local community interested in Go & cloud-native
+        meetup, which is a&nbsp;local community interested in Go & cloud-native
         topics.
       </Paragraph>
     </TextWrapper>
