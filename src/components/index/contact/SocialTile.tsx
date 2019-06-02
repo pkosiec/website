@@ -1,11 +1,7 @@
 import * as React from "react";
 import styled from "@config/styled";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  IconPrefix,
-  IconName,
-  IconProp,
-} from "@fortawesome/fontawesome-svg-core";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { TileLink, Tile } from "@components/index/contact/Tile";
 
 const Icon = styled(FontAwesomeIcon)`
@@ -17,30 +13,34 @@ const Icon = styled(FontAwesomeIcon)`
   margin: auto;
 `;
 
-interface SocialTileProps {
+export interface SocialLink {
   name: string;
+  url: string;
   iconName: string;
   iconPrefix?: string;
-  url: string;
+  featured?: boolean;
 }
 
-export const SocialTile: React.FunctionComponent<SocialTileProps> = ({
+export const SocialTile: React.FunctionComponent<SocialLink> = ({
   name,
   iconName,
-  iconPrefix = "fab",
+  iconPrefix,
+  featured = false,
   url,
 }) => {
-  const iconProp: IconProp = [iconPrefix as IconPrefix, iconName as IconName];
+  if (!iconPrefix) {
+    iconPrefix = "fab";
+  }
 
   return (
-    <Tile>
+    <Tile featured={featured}>
       <TileLink
         title={name}
         href={url}
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Icon size="2x" icon={iconProp} />
+        <Icon size="2x" icon={[iconPrefix, iconName] as IconProp} />
       </TileLink>
     </Tile>
   );

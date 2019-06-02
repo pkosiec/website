@@ -14,6 +14,27 @@ module.exports = {
         path: `${__dirname}/src/assets`,
       },
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "content",
+        path: `${__dirname}/src/content`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: "gatsby-remark-external-links",
+            options: {
+              target: "_blank",
+              rel: "nofollow",
+            },
+          },
+        ],
+      },
+    },
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
     {
@@ -32,6 +53,14 @@ module.exports = {
       resolve: "gatsby-plugin-typography",
       options: {
         pathToConfigModule: "src/config/typography",
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-10085102-10",
+        head: false,
+        anonymize: true,
       },
     },
   ],
