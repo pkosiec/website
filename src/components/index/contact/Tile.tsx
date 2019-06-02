@@ -69,7 +69,6 @@ function getTileStyles(
     : props.theme.tile;
 
   const styles = tileStyle[TileStateType[type]];
-  console.log(styles);
   return css`
     border-color: ${styles.borderColor};
     background-color: ${styles.backgroundColor};

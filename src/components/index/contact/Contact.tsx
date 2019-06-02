@@ -14,7 +14,6 @@ const TileList = styled.ul`
 `;
 
 export interface ContactProps {
-  email: string;
   socialLinks: SocialLink[];
 }
 
