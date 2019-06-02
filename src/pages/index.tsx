@@ -25,18 +25,13 @@ interface IndexProps {
 }
 
 const IndexPage: React.FunctionComponent<IndexProps> = ({ data }) => {
-  const {
-    author,
-    socialLinks,
-    projects,
-    projectsEnabled,
-  } = data.site.siteMetadata;
+  const { socialLinks, projects } = data.site.siteMetadata;
 
   return (
     <DefaultLayout>
       <About />
       <Contact socialLinks={socialLinks} />
-      {projectsEnabled && <Projects projects={projects} />}
+      <Projects projects={projects} />
     </DefaultLayout>
   );
 };
@@ -55,7 +50,6 @@ export const query = graphql`
           iconPrefix
           featured
         }
-        projectsEnabled
         projects {
           title
           description

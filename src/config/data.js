@@ -39,18 +39,23 @@ const data = {
       iconName: "instagram",
     },
   ],
-  projectsEnabled: false,
   projects: [
     {
       title: "Mongo Seeding",
-      description: "Open source solution for populating MongoDB database",
+      description: "Ultimate solution for populating MongoDB database",
       link: "https://github.com/pkosiec/mongo-seeding",
       image: "/projects/mongo-seeding.png",
     },
     {
+      title: "Terminer",
+      description: "Upgrade your terminal experience with a single command.",
+      link: "https://github.com/pkosiec/terminer",
+      image: "/projects/terminer.png",
+    },
+    {
       title: "Gophers Silesia",
       description: "Local Go & Cloud Native Meetup",
-      link: "https://www.meetup.com/GophersSilesia/",
+      link: "https://www.meetup.com/GophersSilesia",
       image: "/projects/gophers-silesia.png",
     },
   ],
