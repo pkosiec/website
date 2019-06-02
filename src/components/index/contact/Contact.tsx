@@ -1,16 +1,17 @@
 import * as React from "react";
 import styled from "@config/styled";
 
+import { media } from "@config/responsive";
 import { SocialTile, SocialLink } from "@components/index/contact/SocialTile";
 import { Section } from "@components/layout/shared/Section";
 
 const TileList = styled.ul`
   list-style-type: none;
-  margin: 0 -15px;
+  margin: 0 -20px;
 
-  li + li {
-    margin-left: 15px;
-  }
+  ${media.phone`
+    margin: 0;
+  `}
 `;
 
 export interface ContactProps {

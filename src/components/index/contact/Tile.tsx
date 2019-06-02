@@ -19,6 +19,7 @@ export const Tile = styled("li")<TileProps>`
   display: inline-block;
   position: relative;
   vertical-align: middle;
+  margin: 10px;
   text-align: center;
   border: 1px solid transparent;
   border-radius: 70px;
