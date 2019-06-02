@@ -6,7 +6,8 @@ import {
   faGithub,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+// import { } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 
 config.autoAddCss = false;
 

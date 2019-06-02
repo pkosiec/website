@@ -1,13 +1,15 @@
-import styled from "@config/styled";
+import styled, { css } from "@config/styled";
 import { media } from "@config/responsive";
+import { TileStateType } from "@config/themes";
+import { ThemedStyledProps } from "styled-components";
 
-const DEFAULT_TILE_DIMENSION = "75px";
+const DEFAULT_TILE_DIMENSION = "70px";
 
 interface TileProps {
   width?: string;
   height?: string;
   lineHeight?: string;
-  highlighted?: boolean;
+  featured?: boolean;
   big?: boolean;
 }
 
@@ -16,35 +18,22 @@ export const Tile = styled("li")<TileProps>`
   height: ${props => (props.height ? props.height : DEFAULT_TILE_DIMENSION)};
   display: inline-block;
   position: relative;
-  margin: 15px;
   vertical-align: middle;
-  line-height: ${props => (props.lineHeight ? props.lineHeight : "45px")};
   text-align: center;
-  border: 1px solid
-    ${props =>
-      props.highlighted ? props.theme.tileColor : props.theme.tileBorderColor};
-  border-radius: 999px;
+  border: 1px solid transparent;
+  border-radius: 70px;
   background-color: transparent;
   transition: all ease-out 0.15s;
   transition-property: background-color, border-color;
+  ${props => getTileStyles(props, TileStateType.INITIAL)}
 
   &:hover {
-    border-color: ${props =>
-      props.highlighted ? props.theme.accentColor : props.theme.borderActive};
-    ${props =>
-      props.highlighted &&
-      `
-    > * {
-      color: ${props.theme.accentColor};
-    }
-    `}
+    ${props => getTileStyles(props, TileStateType.HOVER)}
   }
 
   &:focus,
   &:active {
-    border-color: ${props =>
-      props.highlighted ? props.theme.accentColor : props.theme.borderActive};
-    background-color: ${props => props.theme.backgroundActive};
+    ${props => getTileStyles(props, TileStateType.ACTIVE)}
 
     span {
       opacity: 1;
@@ -67,6 +56,25 @@ export const TileLink = styled.a`
   display: block;
   text-align: center;
   text-decoration: none;
-  color: ${props => props.theme.tileColor};
+  border: 0;
   transition: color ease-out 0.15s;
 `;
+
+function getTileStyles(
+  props: ThemedStyledProps<any, any> & TileProps,
+  type: TileStateType,
+) {
+  const tileStyle = props.featured
+    ? props.theme.featuredTile
+    : props.theme.tile;
+
+  const styles = tileStyle[TileStateType[type]];
+  console.log(styles);
+  return css`
+    border-color: ${styles.borderColor};
+    background-color: ${styles.backgroundColor};
+    > * {
+      color: ${styles.color};
+    }
+  `;
+}

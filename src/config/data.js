@@ -9,19 +9,34 @@ const data = {
     "fullstack,frontend,backend,developer,golang,javascript,react,kubernetes,cloud,cloud-native,open-source",
   description:
     "I am software developer interested in technology and gadgets. Cloud-native and open-source enthusiast.",
-  socialMedia: [
+  socialLinks: [
+    {
+      name: "Get in touch",
+      url: "mailto:pawel@kosiec.net",
+      iconName: "envelope",
+      iconPrefix: "far",
+      featured: true,
+    },
     {
       name: "LinkedIn",
       url: "https://www.linkedin.com/in/pkosiec",
-      icon: "linkedin-in",
+      iconName: "linkedin-in",
     },
-    { name: "GitHub", url: "https://github.com/pkosiec", icon: "github" },
-    { name: "Twitter", url: "https://twitter.com/pkosiec", icon: "twitter" },
-    { name: "Medium", url: "https://medium.com/@pkosiec", icon: "medium-m" },
+    { name: "GitHub", url: "https://github.com/pkosiec", iconName: "github" },
+    {
+      name: "Twitter",
+      url: "https://twitter.com/pkosiec",
+      iconName: "twitter",
+    },
+    {
+      name: "Medium",
+      url: "https://medium.com/@pkosiec",
+      iconName: "medium-m",
+    },
     {
       name: "Instagram",
       url: "https://www.instagram.com/pkosiec",
-      icon: "instagram",
+      iconName: "instagram",
     },
   ],
   projectsEnabled: false,

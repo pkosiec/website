@@ -5,7 +5,7 @@ import "@config/icons";
 
 import { DefaultLayout } from "@components/layout/DefaultLayout";
 import { About } from "@components/index/about/About";
-import { Contact, SocialMedia } from "@components/index/contact/Contact";
+import { Contact, SocialLink } from "@components/index/contact/Contact";
 import { Project } from "@components/index/projects/Project";
 import Projects from "@components/index/projects/Projects";
 
@@ -16,7 +16,7 @@ interface IndexProps {
         author: {
           email: string;
         };
-        socialMedia: SocialMedia[];
+        socialLinks: SocialLink[];
         projects: Project[];
         projectsEnabled: boolean;
       };
@@ -27,7 +27,7 @@ interface IndexProps {
 const IndexPage: React.FunctionComponent<IndexProps> = ({ data }) => {
   const {
     author,
-    socialMedia,
+    socialLinks,
     projects,
     projectsEnabled,
   } = data.site.siteMetadata;
@@ -35,7 +35,7 @@ const IndexPage: React.FunctionComponent<IndexProps> = ({ data }) => {
   return (
     <DefaultLayout>
       <About />
-      <Contact email={author.email} socialMedia={socialMedia} />
+      <Contact socialLinks={socialLinks} />
       {projectsEnabled && <Projects projects={projects} />}
     </DefaultLayout>
   );
@@ -48,10 +48,12 @@ export const query = graphql`
         author {
           email
         }
-        socialMedia {
+        socialLinks {
           name
           url
-          icon
+          iconName
+          iconPrefix
+          featured
         }
         projectsEnabled
         projects {
