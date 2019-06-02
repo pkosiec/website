@@ -28,6 +28,10 @@ const Markdown = styled.div`
     &:active {
       opacity: 0.8;
     }
+
+    &.gatsby-resp-image-link {
+      text-decoration: none;
+    }
   }
 `;
 

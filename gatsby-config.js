@@ -32,6 +32,12 @@ module.exports = {
               rel: "nofollow",
             },
           },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+            },
+          },
         ],
       },
     },
