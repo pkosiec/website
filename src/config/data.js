@@ -3,8 +3,10 @@ const package = require("../../package.json");
 const data = {
   title: "Paweł Kosiec, Full-stack Developer",
   author: package.author,
+  siteUrl: "https://kosiec.net",
   copyright: `©2012-${new Date().getFullYear()} Paweł Kosiec`,
-  keywords: "fullstack,frontend,backend,developer,golang,javascript,react",
+  keywords:
+    "fullstack,frontend,backend,developer,golang,javascript,react,kubernetes,cloud,cloud-native,open-source",
   description:
     "I am software developer interested in technology and gadgets. Cloud-native and open-source enthusiast.",
   socialMedia: [
