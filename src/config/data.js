@@ -54,7 +54,7 @@ const data = {
     },
     {
       title: "Gophers Silesia",
-      description: "Local Go & Cloud Native Meetup",
+      description: "Organization of Go & Cloud Native Meetup",
       link: "https://www.meetup.com/GophersSilesia",
       image: "/projects/gophers-silesia.png",
     },
