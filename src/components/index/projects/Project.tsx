@@ -11,13 +11,13 @@ const Box = styled.div`
   transition: all ease-out 0.2s;
   :hover {
     transform: scale(1.02);
-    box-shadow: 0px 0px 18px -8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 18px -8px ${props => props.theme.shadowColor};
   }
 
   :active,
   :focus {
     transform: scale(0.97);
-    box-shadow: 0px 0px 25px -5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 25px -5px ${props => props.theme.shadowColor};
   }
 `;
 
@@ -42,7 +42,7 @@ interface ImageWrapperProps {
 }
 
 const ImageWrapper = styled.div<ImageWrapperProps>`
-  background-color: "#f6f6f6";
+  background-color: #f6f6f6;
   min-height: 200px;
   position: relative;
   border-bottom: 1px solid ${props => props.theme.borderColor};

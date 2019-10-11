@@ -36,7 +36,7 @@ const Projects: React.FunctionComponent<ProjectsProps> = ({
 }) => {
   return (
     <Section>
-      <h1>Projects & Initiatives</h1>
+      <h1>Featured Projects</h1>
       <List>
         {projects.map(project => (
           <Item key={project.title}>
