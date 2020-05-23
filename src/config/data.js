@@ -39,6 +39,7 @@ const data = {
       iconName: "instagram",
     },
   ],
+  projectsSectionVisible: false,
   projects: [
     {
       title: "Mongo Seeding",
