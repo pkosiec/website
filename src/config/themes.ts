@@ -23,6 +23,7 @@ export interface Theme {
   borderActive: string;
   tile: TileTheme;
   featuredTile: TileTheme;
+  shadowColor: string;
 }
 
 const darkTheme: Theme = {
@@ -30,7 +31,7 @@ const darkTheme: Theme = {
   backgroundColor: "#1a1a1a",
   backgroundActive: "#2b2b2b",
   textColor: "#fff",
-  borderColor: "#2b2b2b",
+  borderColor: "#666",
   borderActive: "#504e4e",
   tile: {
     INITIAL: {
@@ -66,6 +67,7 @@ const darkTheme: Theme = {
       backgroundColor: "#ffcc00",
     },
   },
+  shadowColor: "rgba(255, 255, 255, 0.3)",
 };
 
 const lightTheme: Theme = {
@@ -110,6 +112,7 @@ const lightTheme: Theme = {
       backgroundColor: "#026cee",
     },
   },
+  shadowColor: "rgba(0, 0, 0, 0.3)",
 };
 
 export const themes: Theme[] = [lightTheme, darkTheme];

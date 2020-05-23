@@ -17,6 +17,7 @@ interface IndexProps {
           email: string;
         };
         socialLinks: SocialLink[];
+        projectsSectionVisible: boolean;
         projects: Project[];
         projectsEnabled: boolean;
       };
@@ -26,17 +27,16 @@ interface IndexProps {
 
 const IndexPage: React.FunctionComponent<IndexProps> = ({ data }) => {
   const {
-    author,
     socialLinks,
     projects,
-    projectsEnabled,
+    projectsSectionVisible,
   } = data.site.siteMetadata;
 
   return (
     <DefaultLayout>
       <About />
       <Contact socialLinks={socialLinks} />
-      {projectsEnabled && <Projects projects={projects} />}
+      {projectsSectionVisible && <Projects projects={projects} />}
     </DefaultLayout>
   );
 };
@@ -55,7 +55,7 @@ export const query = graphql`
           iconPrefix
           featured
         }
-        projectsEnabled
+        projectsSectionVisible
         projects {
           title
           description
