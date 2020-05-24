@@ -1,5 +1,5 @@
 import * as React from "react";
-import { themes } from "@config/themes";
+import { themes, LIGHT_THEME_INDEX, DARK_THEME_INDEX } from "@config/themes";
 import { ThemeProvider } from "@config/styled";
 import { ThemeSwitcherContext } from "@components/layout/theme/ThemeSwitcher.context";
 
@@ -10,29 +10,81 @@ interface ThemeWrapperState {
 export class ThemeWrapper extends React.Component<{}, ThemeWrapperState> {
   static THEME_KEY = "theme";
 
+  matchMediaColorScheme?: MediaQueryList;
+
   state = {
-    currentThemeIndex: 0,
+    currentThemeIndex: LIGHT_THEME_INDEX,
   };
 
   componentDidMount() {
-    const savedTheme = localStorage.getItem(ThemeWrapper.THEME_KEY);
-    if (!savedTheme) {
+    const savedThemeStr = localStorage.getItem(ThemeWrapper.THEME_KEY);
+    const savedThemeIndex = Number(savedThemeStr);
+    if (!savedThemeStr || savedThemeIndex >= themes.length) {
+      this.initializeMarchMediaColorScheme();
+
       this.setState({
-        currentThemeIndex: 0,
+        currentThemeIndex: this.getDefaultThemeIndex(),
       });
       return;
     }
 
-    const savedThemeIndex = Number(savedTheme);
     if (savedThemeIndex >= themes.length) {
-      // invalid value
+      // remove invalid value
       localStorage.removeItem(ThemeWrapper.THEME_KEY);
     }
+
+    this.watchForPreferredThemeChange();
 
     this.setState({
       currentThemeIndex: savedThemeIndex,
     });
   }
+
+  componentWillUnmount = () => {
+    this.unwatchPreferredThemeChange();
+  };
+
+  initializeMarchMediaColorScheme = () => {
+    if (window.matchMedia) {
+      this.matchMediaColorScheme = window.matchMedia(
+        "(prefers-color-scheme: dark)",
+      );
+    }
+  };
+
+  watchForPreferredThemeChange = () => {
+    if (!this.matchMediaColorScheme) {
+      return;
+    }
+
+    this.matchMediaColorScheme.addListener(
+      this.listenForMatchMediaColorSchemeChange,
+    );
+  };
+
+  unwatchPreferredThemeChange = () => {
+    if (!this.matchMediaColorScheme) {
+      return;
+    }
+
+    this.matchMediaColorScheme.removeListener(
+      this.listenForMatchMediaColorSchemeChange,
+    );
+  };
+
+  listenForMatchMediaColorSchemeChange = () => {
+    this.setState({
+      currentThemeIndex: this.getDefaultThemeIndex(),
+    });
+  };
+
+  getDefaultThemeIndex = () => {
+    if (this.matchMediaColorScheme && this.matchMediaColorScheme.matches) {
+      return DARK_THEME_INDEX;
+    }
+
+    return LIGHT_THEME_INDEX;
+  };
 
   evaluateNextThemeIndex = () => {
     let nextTheme = this.state.currentThemeIndex! + 1;

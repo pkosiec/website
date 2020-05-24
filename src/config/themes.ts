@@ -17,8 +17,6 @@ export interface Theme {
   backgroundActive: string;
   accentColor: string;
   textColor: string;
-  // tileColor: string;
-  // tileBorderColor: string;
   borderColor: string;
   borderActive: string;
   tile: TileTheme;
@@ -116,3 +114,6 @@ const lightTheme: Theme = {
 };
 
 export const themes: Theme[] = [lightTheme, darkTheme];
+
+export const LIGHT_THEME_INDEX = 0;
+export const DARK_THEME_INDEX = 1;
