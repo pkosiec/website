@@ -7,7 +7,7 @@ type: section
 
 I'm a&nbsp;Full-stack Cloud Developer located in Gliwice, Poland.
 
-Currently I&nbsp;work at SAP Labs, where I&nbsp;develop [Kyma](https://kyma-project.io), an open source project. I&nbsp;write back-end services in **Go**, and modern front-ends using **JavaScript** (React.js). I&nbsp;work in cloud-native environment, associated with microservices and extending **Kubernetes**.
+I&nbsp;write back-end services in **Go**, and modern front-ends using **JavaScript** (React.js). I&nbsp;work in cloud-native environment, extending **Kubernetes** and building microservices.
 
 I am both [Certified Kubernetes Application Developer](https://www.youracclaim.com/badges/4ef650a8-2c5d-48df-bdc7-d7bafdd9e4ec) and [Certified Kubernetes Administrator](https://www.youracclaim.com/badges/32059797-c35c-4c49-bcc3-d27268a530df).
 
