@@ -5,7 +5,8 @@
   "version": "0.1.0",
   "author": {
     "name": "Paweł Kosiec",
-    "email": "pawel@kosiec.net"
+    "email": "pawel@kosiec.net",
+    "url": "https://kosiec.net"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
