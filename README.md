@@ -1,6 +1,6 @@
 
 <p align="center">
- <img src="https://raw.githubusercontent.com/pkosiec/website/master/src/assets/logo.png" width="75">
+ <img src="https://raw.githubusercontent.com/pkosiec/website/main/src/assets/logo.png" width="75">
 </p>
 
 # Personal Website
