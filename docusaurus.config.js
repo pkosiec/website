@@ -6,18 +6,17 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  url: 'https://your-docusaurus-test-site.com',
+  title: 'Paweł Kosiec, Full-stack Developer',
+  tagline: 'I am software developer interested in technology and gadgets. Cloud-native and open-source enthusiast.',
+  url: 'https://kosiec.net',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  // GitHub pages deployment config
+  organizationName: 'pkosiec',
+  projectName: 'website',
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -27,6 +26,7 @@ const config = {
     locales: ['en'],
   },
 
+  plugins: ['docusaurus-plugin-sass'],
   presets: [
     [
       'classic',
@@ -47,7 +47,11 @@ const config = {
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: [require.resolve('./src/css/custom.scss')],
+          metadata: [
+            {name: 'description', content: 'I am software developer interested in technology and gadgets. Cloud-native and open-source enthusiast.'},
+            {name: 'keywords', content:     "fullstack,frontend,backend,developer,go,golang,javascript,react,kubernetes,cloud,cloud-native,open-source"}
+          ],
         },
       }),
     ],
@@ -57,9 +61,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'My Site',
+        title: 'Paweł Kosiec',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'Paweł Kosiec Logo',
           src: 'img/logo.svg',
         },
         items: [
