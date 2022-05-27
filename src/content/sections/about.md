@@ -5,9 +5,9 @@ type: section
 
 # Hi. I'm Paweł Kosiec.
 
-I'm a&nbsp;Full-stack Cloud Developer located in Gliwice, Poland.
+I'm a&nbsp;Full-stack Cloud Developer from Poland.
 
-I&nbsp;write back-end services in **Go**, and modern front-ends using **JavaScript** (React.js). I&nbsp;work in cloud-native environment, extending **Kubernetes** and building microservices.
+I&nbsp;write back-end services in **Go**, and modern front-ends using **JavaScript** (React.js). I&nbsp;work in cloud-native environment, extending **Kubernetes** and building microservices. And all of that in the "you build it, you run it" model.
 
 I am both [Certified Kubernetes Application Developer](https://www.youracclaim.com/badges/4ef650a8-2c5d-48df-bdc7-d7bafdd9e4ec) and [Certified Kubernetes Administrator](https://www.youracclaim.com/badges/32059797-c35c-4c49-bcc3-d27268a530df).
 

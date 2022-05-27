@@ -34,6 +34,11 @@ const data = {
       iconName: "medium-m",
     },
     {
+      name: "Dev.to",
+      url: "https://dev.to/pkosiec",
+      iconName: "dev",
+    },
+    {
       name: "Instagram",
       url: "https://www.instagram.com/pkosiec",
       iconName: "instagram",
