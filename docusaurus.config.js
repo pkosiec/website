@@ -54,6 +54,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
+        hideOnScroll: false,
         title: 'Paweł Kosiec',
         logo: {
           alt: 'Paweł Kosiec Logo',
