@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Paweł Kosiec, Full-stack Developer',
-  tagline: 'I am software developer interested in technology and gadgets. Cloud-native and open-source enthusiast.',
+  title: 'Paweł Kosiec, Full-stack Cloud Developer',
+  tagline: 'Software engineer interested in technology and gadgets. Cloud-native and open-source enthusiast.',
   url: 'https://kosiec.net',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -18,9 +18,6 @@ const config = {
   organizationName: 'pkosiec',
   projectName: 'website',
 
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -32,25 +29,21 @@ const config = {
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
+        docs: false,
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/pkosiec/website/tree/main/',
+            feedOptions: {
+              type: 'all',
+              copyright: `Copyright © ${new Date().getFullYear()} Paweł Kosiec`,
+            },
         },
         theme: {
           customCss: [require.resolve('./src/css/custom.scss')],
           metadata: [
             {name: 'description', content: 'I am software developer interested in technology and gadgets. Cloud-native and open-source enthusiast.'},
-            {name: 'keywords', content:     "fullstack,frontend,backend,developer,go,golang,javascript,react,kubernetes,cloud,cloud-native,open-source"}
+            {name: 'keywords', content:     "fullstack,frontend,backend,developer,engineer,go,golang,javascript,react,reactjs,kubernetes,devops,cloud,cloud-native,open-source"}
           ],
         },
       }),
@@ -67,64 +60,68 @@ const config = {
           src: 'img/logo.svg',
         },
         items: [
-          {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: 'Tutorial',
-          },
           {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
-          },
+          {to: '/projects', label: 'Projects', position: 'left'},
+          {to: '/talks', label: 'Talks', position: 'left'},
         ],
       },
       footer: {
-        style: 'dark',
+        style: 'light',
+        
         links: [
-          {
-            title: 'Docs',
+          {            
+            title: 'Connect',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'LinkedIn',
+                href: 'https://www.linkedin.com/in/pkosiec',
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                href: 'https://twitter.com/pkosiec',
+              },
+              {
+                label: 'Email me',
+                href: "mailto:pawel@kosiec.net"
               },
             ],
           },
           {
-            title: 'More',
+            title: 'Discover',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
+                label: 'About me',
+                to: "/"
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'Projects',
+                to: "/projects"
+              },
+              {
+                label: 'Talks',
+                to: "/talks"
+              },
+            ],
+          },
+          {
+            title: 'Subscribe to Blog',
+            items: [
+              {
+                label: 'RSS',
+                to: '/blog/rss.xml',
+              },
+              {
+                label: 'Atom',
+                to: '/blog/atom.xml',
+              },
+              {
+                label: 'JSON',
+                to: '/blog/feed.json',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © 2012-${new Date().getFullYear()} Paweł Kosiec.`,
       },
       prism: {
         theme: lightCodeTheme,
