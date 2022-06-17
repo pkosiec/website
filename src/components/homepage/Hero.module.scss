@@ -1,35 +1,35 @@
+@import '../../css/mixins';
+
 .heroBanner {
-    padding: 9rem 0;
-    text-align: left;
-    position: relative;
-    overflow: hidden;
-    background: #000;
-    margin-bottom: 2rem;
-  }
+  padding: 10rem 0;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  background: #000;
+  color: #fff;
+  margin-bottom: 4rem;
 
-
-  html[data-theme="dark"] .heroBanner {
-    color: #fff;
-  }
-  
-.title {
-font-size: 5em;
-}
-
-.highlighted {
-    background: linear-gradient(to left, #0054ad 0%, #b8fb3c 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.subtitle {
-
-}
-
-  @media screen and (max-width: 996px) {
-    .heroBanner {
+  @include small-size {
+    & {
       padding: 2rem;
     }
   }
-  
+}
+
+.title {
+  font-size: 4rem;
+  text-shadow: 3px 0px 30px rgba(0, 0, 0, 0.2);
+
+  @include small-size {
+    & {
+      font-size: 2rem;
+    }
+  }
+}
+
+.highlighted {
+  background: linear-gradient(to left, #0054ad 0%, #b8fb3c 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

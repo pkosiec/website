@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 
 h1,
 h2,
@@ -11,7 +11,10 @@ h5 {
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #0054ad;
+  --pk-blue: #0054ad;
+  --pk-green: #b8fb3c;
+
+  --ifm-color-primary: var(--pk-blue);
   --ifm-color-primary-dark: #004c9c;
   --ifm-color-primary-darker: #004793;
   --ifm-color-primary-darkest: #003b79;
@@ -20,12 +23,18 @@ h5 {
   --ifm-color-primary-lightest: #006de1;
   --ifm-code-font-size: 95%;
   --ifm-font-family-base: "Inter", sans-serif;
+  --ifm-font-size-base: 17px;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  --ifm-footer-background-color: transparent;
+  --ifm-footer-padding-vertical: calc(var(--ifm-spacing-vertical) * 3);
+
+  --ifm-global-radius: 0.3rem;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
-  --ifm-color-primary: #b8fb3c;
+[data-theme="dark"] {
+  --ifm-color-primary: var(--pk-green);
   --ifm-color-primary-dark: #adfa1e;
   --ifm-color-primary-darker: #a7fa0e;
   --ifm-color-primary-darkest: #8cd504;
@@ -33,13 +42,28 @@ h5 {
   --ifm-color-primary-lighter: #c9fc6a;
   --ifm-color-primary-lightest: #d9fd97;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
 }
 
-html[data-theme="dark"] .navbar__logo {
-  padding: 32px 32px 0px 0px;
-  background: url("/static/img/logo-white.svg");
-  background-size: cover;
-  width: 0px;
-  height: 0px;
+html[data-theme="dark"] {
+  --ifm-background-color: #222222;
+  --ifm-background-surface-color: #1b1b1b;
+
+  .navbar__logo {
+    padding: 32px 32px 0px 0px;
+    background: url("/static/img/logo-white.svg");
+    background-size: cover;
+    width: 0px;
+    height: 0px;
+  }
 }
 
+.footer {
+// border-top: 1px solid #000;
+margin-top: 2rem;
+border-top: 1px solid var(--ifm-color-emphasis-300);
+
+  &__bottom {
+    margin-top: 4rem;
+  }
+}

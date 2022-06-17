@@ -1,9 +1,7 @@
 import React from 'react';
-import clsx from 'clsx';
-import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import AboutMe from './_about-me.md';
+import { AboutMe } from '../components/homepage/AboutMe';
 
 import { SocialLinks } from '../components/homepage/SocialLinks';
 import { Hero } from '../components/homepage/Hero';
@@ -14,7 +12,7 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title="Home"
-      description="I am software developer interested in technology and gadgets. Cloud-native and open-source enthusiast.">
+      description={siteConfig.tagline}>
       <Hero />
       <main>
         <div className='container padding-vert'>
@@ -22,7 +20,7 @@ export default function Home(): JSX.Element {
           <SocialLinks />
         </div>
       </main>
-    </Layout>
+    </Layout >
   );
 }
 

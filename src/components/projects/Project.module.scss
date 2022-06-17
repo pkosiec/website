@@ -1,0 +1,14 @@
+.card {
+    margin-bottom: calc(var(--ifm-spacing-horizontal) * 2);
+}
+
+.image {
+    background: #f7f7f7;
+    position: relative;
+}
+
+.role {
+position: absolute;
+left: 1rem;
+bottom: 1rem;
+}
