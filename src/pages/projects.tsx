@@ -34,14 +34,17 @@ const projects: ProjectData[] = [
     },
 ]
 
+const title = "Projects"
+const description = "Featured projects I was/am involved in"
+
 export default function Projects(): JSX.Element {
     return (
         <Layout
-            title="Projects"
-            description="Featured projects I was/am involved in">
+            title={title}
+            description={description}>
             <main className="container container--fluid margin-vert--lg">
-                <h1>Projects</h1>
-                <p>The featured projects I am involved in.</p>
+                <h1>{title}</h1>
+                <p>{description}</p>
 
                 <div className="row">
                     {projects.map(project => <Project {...project} />)}

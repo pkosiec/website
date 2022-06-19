@@ -1,9 +1,8 @@
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import clsx from 'clsx';
 import React, { FunctionComponent } from 'react';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-import NewWindowIcon from "./new-window.svg";
+import NewWindowIcon from "./icon-new-window.svg";
 import styles from './Project.module.scss';
 
 export interface ProjectData {

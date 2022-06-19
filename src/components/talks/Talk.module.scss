@@ -1,0 +1,18 @@
+.card {
+  margin-bottom: calc(var(--ifm-spacing-horizontal) * 2);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  box-shadow: none;
+}
+
+.list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.btnIcon {
+    width: 18px;
+    height: 18px;
+    float: left;
+    position: relative;
+    top: 2px;
+}
