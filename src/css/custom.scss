@@ -42,7 +42,6 @@ h5 {
   --ifm-color-primary-lighter: #c9fc6a;
   --ifm-color-primary-lightest: #d9fd97;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-
 }
 
 html[data-theme="dark"] {
@@ -59,11 +58,37 @@ html[data-theme="dark"] {
 }
 
 .footer {
-// border-top: 1px solid #000;
-margin-top: 2rem;
-border-top: 1px solid var(--ifm-color-emphasis-300);
+  // border-top: 1px solid #000;
+  margin-top: 2rem;
+  border-top: 1px solid var(--ifm-color-emphasis-300);
 
   &__bottom {
     margin-top: 4rem;
+  }
+}
+
+.button__icon {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  margin-right: 0.5rem;
+  position: relative;
+  top: 3px;
+  fill: var(--ifm-button-color);
+
+  .button--secondary & {
+    fill: var(--ifm-color-gray-900);
+
+    [data-theme="dark"] & {
+      fill: var(--ifm-font-color-base);
+    }
+  }
+
+  .button--outline:hover &,
+  .button--outline:active &,
+  .button--outline.button--active & {
+    [data-theme="dark"] & {
+      fill: var(--ifm-font-color-base-inverse);;
+    }
   }
 }

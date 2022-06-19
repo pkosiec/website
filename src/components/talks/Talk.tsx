@@ -40,28 +40,24 @@ const Talk: FunctionComponent<TalkMetadata> = ({ title, description, events = []
                     </div>
                 </div>
                 <div className="card__footer">
-                    <div className="row">
+                    <div className={styles.buttons}>
                         {recordingURL &&
-                            <div className="col">
-                                <a href={recordingURL} target="_blank" className="button button--secondary button--block">
-                                    <span className={styles.btnIcon}><RecordingIcon /></span>
-                                    Watch recording
-                                </a>
-                            </div>
+                            <a href={recordingURL} target="_blank" className="button button--primary button--outline">
+                                <span className="button__icon"><RecordingIcon /></span>
+                                Watch recording
+                            </a>
                         }
                         {slidesURL &&
-                            <div className="col">
-                                <a href={slidesURL} target="_blank" className="button button--secondary button--outline button--block">
-                                    <span className={styles.btnIcon}><SlidesIcon /></span>
-                                    See slides
-                                </a>
-                            </div>}
-                        {repoURL && <div className="col">
-                            <a href={repoURL} target="_blank" className="button button--secondary button--outline button--block">
-                                <span className={styles.btnIcon}><RepositoryIcon /></span>
-                                See repository
+                            <a href={slidesURL} target="_blank" className="button button--secondary button--outline">
+                                <span className="button__icon"><SlidesIcon /></span>
+                                See slides
                             </a>
-                        </div>}
+                        }
+                        {repoURL &&
+                            <a href={repoURL} target="_blank" className="button button--secondary button--outline">
+                                <span className="button__icon"><RepositoryIcon /></span>
+                                See repository
+                            </a>}
                     </div>
                 </div>
             </div>

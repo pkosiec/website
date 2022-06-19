@@ -9,10 +9,8 @@
   padding-left: 0;
 }
 
-.btnIcon {
-    width: 18px;
-    height: 18px;
-    float: left;
-    position: relative;
-    top: 2px;
+.buttons {
+  a + a {
+    margin-left: 0.5em;
+  }
 }

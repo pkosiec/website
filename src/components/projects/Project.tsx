@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import React, { FunctionComponent } from 'react';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-import NewWindowIcon from "./icon-new-window.svg";
+import DiscoverIcon from "./icon-discover.svg";
 import styles from './Project.module.scss';
 
 export interface ProjectData {
@@ -29,7 +29,10 @@ export const Project: FunctionComponent<ProjectData> = ({ title, description, ur
                     <p>{description}</p>
                 </div>
                 <div className="card__footer">
-                    <a href={url} target="_blank" className="button button--secondary button--outline button--block">Discover <span className={styles.icon}><NewWindowIcon/></span></a>
+                    <a href={url} target="_blank" className="button button--primary button--outline">
+                        <span className="button__icon"><DiscoverIcon /></span>
+                        Discover
+                    </a>
                 </div>
             </div>
         </div>
