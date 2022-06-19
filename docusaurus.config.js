@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Paweł Kosiec, Full-stack Cloud Developer',
-  tagline: 'Software engineer interested in technology and gadgets. Cloud-native and open-source enthusiast.',
+  tagline: 'Software engineer interested in personal growth and tech trends. Cloud-native and open-source enthusiast.',
   url: 'https://kosiec.net',
   baseUrl: '/',
   onBrokenLinks: 'throw',

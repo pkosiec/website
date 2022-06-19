@@ -1,14 +1,24 @@
 .card {
-    margin-bottom: calc(var(--ifm-spacing-horizontal) * 2);
+  margin-bottom: calc(var(--ifm-spacing-horizontal) * 2);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  box-shadow: none;
 }
 
 .image {
-    background: #f7f7f7;
-    position: relative;
+  background: #f7f7f7;
+  position: relative;
 }
 
 .role {
-position: absolute;
-left: 1rem;
-bottom: 1rem;
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+}
+
+.icon {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    position: relative;
+    top: 2px;
 }

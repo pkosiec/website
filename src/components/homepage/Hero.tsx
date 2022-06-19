@@ -1,11 +1,9 @@
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import clsx from 'clsx';
 import React, { FunctionComponent } from 'react';
 
 import styles from './Hero.module.scss';
 
 export const Hero: FunctionComponent = () => {
-  const { siteConfig } = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
@@ -13,7 +11,7 @@ export const Hero: FunctionComponent = () => {
           Hi. I'm <span className={styles.highlighted}>Paweł Kosiec</span>,<br />Full-stack Cloud Developer.
         </h1>
         <p className={clsx("hero__subtitle", styles.subtitle)}>
-          {siteConfig.tagline}
+          Software engineer interested in personal growth and tech trends.<br /> Cloud-native and open-source enthusiast.
         </p>
       </div>
     </header>
