@@ -1,18 +1,18 @@
-@import '../../css/mixins';
+@import "../../css/mixins";
 
 .heroBanner {
-  padding: 10rem 0;
+  padding: 10rem 0 11rem;
   text-align: left;
   position: relative;
   overflow: hidden;
   background: #000;
   color: #fff;
   margin-bottom: 4rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 
   @include small-size {
-    & {
-      padding: 2rem;
-    }
+    padding: 4rem 2rem;
   }
 }
 
@@ -21,9 +21,15 @@
   text-shadow: 3px 0px 30px rgba(0, 0, 0, 0.2);
 
   @include small-size {
-    & {
-      font-size: 2rem;
-    }
+    font-size: 2rem;
+  }
+}
+
+.subtitle {
+  margin: 0;
+
+  @include small-size {
+    font-size: 1.2rem;
   }
 }
 

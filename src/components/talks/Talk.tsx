@@ -31,10 +31,9 @@ const Talk: FunctionComponent<TalkMetadata> = ({ title, description, events = []
                 <div className="card__body">
                     <div className='row'>
                         <div className='col col--7'>
-                            <p>{description}</p>
-
+                            {description}
                         </div>
-                        <div className='col col--5'>
+                        <div className={clsx('col col--5', styles.eventDetailsContainer )}>
                             <EventDetails data={events} />
                         </div>
                     </div>
@@ -70,7 +69,8 @@ const EventDetails: FunctionComponent<{ data: EventMetadata[] }> = ({ data }) =>
         return null
     }
 
-    const { name, location, date } = data.shift();
+    const [firstEvent, ...otherEvents] = data;
+    const { name, location, date } = firstEvent;
     return (
         <div className="row">
             <div className='col col--12'>
@@ -81,15 +81,13 @@ const EventDetails: FunctionComponent<{ data: EventMetadata[] }> = ({ data }) =>
                 </ul>
             </div>
             {data.length > 1 && (
-                <div className='col '>
+                <div className='col col--12'>
                     <p className='margin--none'>Also presented on:</p>
-
                     <ul>
-                        {data.map(({ name, location, date }) => (
-                            <li><strong>{name}</strong> in {location} ({formatDateString(date)})</li>
+                        {otherEvents.map(({ name, location, date }) => (
+                            <li key={name}><strong>{name}</strong> in {location} ({formatDateString(date)})</li>
                         ))}
                     </ul>
-
                 </div>
 
             )}

@@ -1,7 +1,16 @@
+@import "../../css/mixins";
+
 .card {
   margin-bottom: calc(var(--ifm-spacing-horizontal) * 2);
   border: 1px solid var(--ifm-color-emphasis-300);
   box-shadow: none;
+}
+
+.eventDetailsContainer {
+  @include small-size {
+    border-top: 1px solid var(--ifm-color-emphasis-300);
+    padding-top: var(--ifm-spacing-vertical);
+  }
 }
 
 .list {
@@ -10,7 +19,19 @@
 }
 
 .buttons {
+  > a {
+    @include small-size {
+      width: 100%;
+      margin-top: calc( var(--ifm-spacing-vertical) / 2 );
+    }
+  }
+
   a + a {
     margin-left: 0.5em;
+
+    @include small-size {
+      margin-left: 0;
+    }
+
   }
 }

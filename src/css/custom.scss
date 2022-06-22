@@ -58,13 +58,15 @@ html[data-theme="dark"] {
 }
 
 .footer {
-  // border-top: 1px solid #000;
-  margin-top: 2rem;
   border-top: 1px solid var(--ifm-color-emphasis-300);
 
   &__bottom {
     margin-top: 4rem;
   }
+}
+
+.button--outline:focus {
+  --ifm-button-background-color: var(--ifm-button-border-color);
 }
 
 .button__icon {
@@ -86,6 +88,7 @@ html[data-theme="dark"] {
 
   .button--outline:hover &,
   .button--outline:active &,
+  .button--outline:focus &,
   .button--outline.button--active & {
     [data-theme="dark"] & {
       fill: var(--ifm-font-color-base-inverse);;

@@ -15,7 +15,7 @@ export interface ProjectData {
 
 export const Project: FunctionComponent<ProjectData> = ({ title, description, url, role, imageURL }) => {
     return (
-        <div className="col col--6">
+        <div className={clsx("col col--6", styles.cardContainer)}>
             <div className={clsx("card", styles.card)}>
                 <div className={clsx("card__image", styles.image)}>
                     <img

@@ -13,7 +13,7 @@ export const AboutMe: FunctionComponent = () => {
                 <div className="col col--6">
                     <AboutMeDesc />
                 </div>
-                <div className="col col--5">
+                <div className={clsx("col col--5", styles.avatarContainer)}>
                     <img src={useBaseUrl('/img/avatar.jpg')} className={styles.avatar} />
                 </div>
             </div>

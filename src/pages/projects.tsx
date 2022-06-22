@@ -47,7 +47,7 @@ export default function Projects(): JSX.Element {
                 <p>{description}</p>
 
                 <div className="row">
-                    {projects.map(project => <Project {...project} />)}
+                    {projects.map(project => <Project key={project.title} {...project} />)}
                 </div>
             </main>
         </Layout >

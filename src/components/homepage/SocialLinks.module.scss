@@ -1,5 +1,21 @@
+@import "../../css/mixins";
+
+.container {
+  @include small-size {
+    & > div:nth-child(odd) {
+      padding-right: calc( var(--ifm-spacing-horizontal) / 2 );
+    }
+    & > div:nth-child(even) {
+      padding-left: calc( var(--ifm-spacing-horizontal) / 2 );
+    }
+  }
+}
+
 .col {
-  --ifm-col-width: 137px;
+  @include small-size {
+    --ifm-col-width: 50%;
+    margin-top: var(--ifm-spacing-vertical);
+  }
 }
 
 .btn {
@@ -13,6 +29,9 @@
   &:focus {
     .btnText {
       color: var(--ifm-font-color-base-inverse);
+    }
+    .btnIcon {
+      fill: var(--ifm-font-color-base-inverse);
     }
   }
 }

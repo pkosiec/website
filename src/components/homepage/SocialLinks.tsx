@@ -45,7 +45,7 @@ const socialLinks: SocialLink[] = [
 
 export const SocialLinks: FunctionComponent = () => {
     const socialLinksComponents = socialLinks.map(({ name, url, svg }) => (
-        <div className="col" key={name}>
+        <div className={clsx("col", styles.col)} key={name}>
             <a href={url} target="_blank" className={clsx('button button--outline button--primary', styles.btn)}><span className={styles.btnIcon}>{svg}</span><span className={styles.btnText}>{name}</span></a>
         </div>
     ))

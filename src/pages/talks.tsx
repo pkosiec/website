@@ -73,7 +73,7 @@ export default function Talks(): JSX.Element {
                 <p>{description}</p>
 
                 <div className="row">
-                    {talks.map(talkData => <Talk {...talkData} />)}
+                    {talks.map(talkData => <Talk key={talkData.title} {...talkData} />)}
                 </div>
             </main>
         </Layout >
