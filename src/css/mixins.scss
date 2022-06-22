@@ -1,5 +1,7 @@
 $breakpoint: 996px;
 
 @mixin small-size {
-  @media (max-width: $breakpoint) { @content; }
+  @media (max-width: $breakpoint) {
+    @content;
+  }
 }

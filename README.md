@@ -1,4 +1,3 @@
-
 <p align="center">
  <img src="https://raw.githubusercontent.com/pkosiec/website/main/src/static/img/logo.png" width="75">
 </p>

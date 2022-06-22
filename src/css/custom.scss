@@ -91,7 +91,7 @@ html[data-theme="dark"] {
   .button--outline:focus &,
   .button--outline.button--active & {
     [data-theme="dark"] & {
-      fill: var(--ifm-font-color-base-inverse);;
+      fill: var(--ifm-font-color-base-inverse);
     }
   }
 }

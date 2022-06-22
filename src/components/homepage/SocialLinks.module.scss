@@ -3,10 +3,10 @@
 .container {
   @include small-size {
     & > div:nth-child(odd) {
-      padding-right: calc( var(--ifm-spacing-horizontal) / 2 );
+      padding-right: calc(var(--ifm-spacing-horizontal) / 2);
     }
     & > div:nth-child(even) {
-      padding-left: calc( var(--ifm-spacing-horizontal) / 2 );
+      padding-left: calc(var(--ifm-spacing-horizontal) / 2);
     }
   }
 }

@@ -22,7 +22,7 @@
   > a {
     @include small-size {
       width: 100%;
-      margin-top: calc( var(--ifm-spacing-vertical) / 2 );
+      margin-top: calc(var(--ifm-spacing-vertical) / 2);
     }
   }
 
@@ -32,6 +32,5 @@
     @include small-size {
       margin-left: 0;
     }
-
   }
 }

@@ -9,7 +9,6 @@ on:
       - "main"
 
 jobs:
-
   build:
     name: Lint and build website
     runs-on: ubuntu-latest
