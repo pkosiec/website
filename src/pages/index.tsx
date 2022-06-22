@@ -6,7 +6,6 @@ import { AboutMe } from '../components/homepage/AboutMe';
 import { SocialLinks } from '../components/homepage/SocialLinks';
 import { Hero } from '../components/homepage/Hero';
 
-
 export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
   return (
