@@ -63,7 +63,7 @@ const talks: TalkMetadata[] = [
 ];
 
 const title = "Talks";
-const description = "Featured talks I presented on various events";
+const description = "Featured talks I presented on various events.";
 
 export default function Talks(): JSX.Element {
   return (

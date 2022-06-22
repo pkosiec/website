@@ -65,8 +65,14 @@ html[data-theme="dark"] {
   }
 }
 
-.button--outline:focus {
-  --ifm-button-background-color: var(--ifm-button-border-color);
+.button--outline {
+  &:focus {
+    --ifm-button-background-color: var(--ifm-button-border-color);
+  }
+
+  &.button--primary:focus {
+    --ifm-button-color: var(--ifm-font-color-base-inverse);
+  }
 }
 
 .button__icon {

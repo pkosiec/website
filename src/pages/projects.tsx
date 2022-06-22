@@ -35,7 +35,7 @@ const projects: ProjectData[] = [
 ];
 
 const title = "Projects";
-const description = "Featured projects I was/am involved in";
+const description = "Featured projects I was/am involved in.";
 
 export default function Projects(): JSX.Element {
   return (

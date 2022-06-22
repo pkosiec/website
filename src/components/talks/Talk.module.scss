@@ -7,7 +7,10 @@
 }
 
 .eventDetailsContainer {
+  border-left: 1px solid var(--ifm-color-emphasis-300);
+
   @include small-size {
+    border-left: 0;
     border-top: 1px solid var(--ifm-color-emphasis-300);
     padding-top: var(--ifm-spacing-vertical);
   }
