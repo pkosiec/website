@@ -11,7 +11,7 @@ const config = {
   title: "Paweł Kosiec, Full-stack Cloud Developer",
   tagline:
     "Software engineer interested in personal growth and tech trends. Cloud-native and open-source enthusiast.",
-  url: "https://kosiec.net",
+  url: "https://kosiec.dev",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -93,7 +93,7 @@ const config = {
               },
               {
                 label: "Email me",
-                href: "mailto:pawel@kosiec.net",
+                href: "mailto:pawel@kosiec.dev",
               },
             ],
           },
