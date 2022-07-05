@@ -69,6 +69,7 @@ const config = {
         logo: {
           alt: "Paweł Kosiec Logo",
           src: "img/logo.svg",
+          srcDark: "img/logo-white.svg",
         },
         items: [
           { to: "/blog", label: "Blog", position: "left" },

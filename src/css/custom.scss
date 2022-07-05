@@ -45,20 +45,16 @@ h5 {
 }
 
 html[data-theme="dark"] {
-  --ifm-background-color: #222222;
-  --ifm-background-surface-color: #1b1b1b;
+  --ifm-background-color: #101010;
+  --ifm-background-surface-color: #101010;
 
-  .navbar__logo {
-    padding: 32px 32px 0px 0px;
-    background: url("/static/img/logo-white.svg");
-    background-size: cover;
-    width: 0px;
-    height: 0px;
+  .navbar {
+    border-bottom: 1px solid var(--ifm-color-emphasis-200);
   }
 }
 
 .footer {
-  border-top: 1px solid var(--ifm-color-emphasis-300);
+  border-top: 1px solid var(--ifm-color-emphasis-200);
 
   &__bottom {
     margin-top: 4rem;
