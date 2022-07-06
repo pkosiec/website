@@ -87,9 +87,9 @@ export const SocialLinks: FunctionComponent = () => {
   ));
 
   return (
-    <div className="margin-top--lg margin-bottom--lg">
+    <div className={styles.socialContainer}>
       <h2>Social media</h2>
-      <div className={clsx("row", styles.container)}>
+      <div className={clsx("row", styles.socialLinks)}>
         {socialLinksComponents}
       </div>
     </div>

@@ -1,6 +1,10 @@
 @import "../../css/mixins";
 
-.container {
+.socialContainer {
+  padding: 2rem 0 4rem;
+}
+
+.socialLinks {
   @include small-size {
     & > div:nth-child(odd) {
       padding-right: calc(var(--ifm-spacing-horizontal) / 2);

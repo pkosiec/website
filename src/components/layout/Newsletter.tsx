@@ -17,8 +17,8 @@ export const Newsletter: FunctionComponent = () => {
         <p>Get my latest content by email. Unsubscribe at any time.</p>
 
         <form action={formAction} className={styles.form} method="post">
-          <input name="EMAIL" autoFocus placeholder="Your email" type="email" />
-          <input name="FNAME" autoFocus placeholder="Your name" />
+          <input name="EMAIL" placeholder="Your email" type="email" />
+          <input name="FNAME" placeholder="Your name" />
           <div
             style={{ position: "absolute", left: "-5000px" }}
             aria-hidden="true"
@@ -26,7 +26,7 @@ export const Newsletter: FunctionComponent = () => {
             <input
               type="text"
               name="b_4ed0fd1909674fddee53ac3e7_dfdcae99f5"
-              tabIndex="-1"
+              tabIndex={-1}
               value=""
             />
           </div>
