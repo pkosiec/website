@@ -1,0 +1,36 @@
+@import "../../css/mixins";
+
+.footerWrapper {
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+.form {
+  > input {
+    line-height: 1.5;
+    padding: calc(var(--ifm-button-padding-vertical))
+      calc(var(--ifm-button-padding-horizontal) / 2);
+    font-size: calc(0.875rem * var(--ifm-button-size-multiplier));
+    border: 1px solid var(--ifm-color-emphasis-300);
+    border-radius: var(--ifm-button-border-radius);
+    margin-right: 0.5rem;
+
+    @include small-size {
+      width: 100%;
+      display: block;
+      margin-bottom: 1rem;
+      margin-right: 0;
+    }
+  }
+}
+
+.newsIcon {
+  width: 30px;
+  height: 30px;
+  padding: 2px;
+  margin-right: 0.3rem;
+  float: left;
+
+  [data-theme="dark"] & {
+    fill: var(--ifm-font-color-base);
+  }
+}

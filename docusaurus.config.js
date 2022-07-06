@@ -21,11 +21,15 @@ const config = {
   organizationName: "pkosiec",
   projectName: "website",
 
+  customFields: {
+    newsletterFormAction:
+      "https://gmail.us14.list-manage.com/subscribe/post?u=4ed0fd1909674fddee53ac3e7&amp;id=dfdcae99f5",
+  },
+
   i18n: {
     defaultLocale: "en",
     locales: ["en"],
   },
-
   plugins: ["docusaurus-plugin-sass"],
   presets: [
     [
@@ -79,11 +83,14 @@ const config = {
       },
       footer: {
         style: "light",
-
         links: [
           {
             title: "Connect",
             items: [
+              {
+                label: "Email me",
+                href: "mailto:pawel@kosiec.dev",
+              },
               {
                 label: "LinkedIn",
                 href: "https://www.linkedin.com/in/pkosiec",
@@ -91,10 +98,6 @@ const config = {
               {
                 label: "Twitter",
                 href: "https://twitter.com/pkosiec",
-              },
-              {
-                label: "Email me",
-                href: "mailto:pawel@kosiec.dev",
               },
             ],
           },
@@ -116,7 +119,7 @@ const config = {
             ],
           },
           {
-            title: "Subscribe to Blog",
+            title: "Blog feed",
             items: [
               {
                 label: "RSS",
