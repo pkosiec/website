@@ -5,6 +5,9 @@ import styles from "./Talk.module.scss";
 import RecordingIcon from "./icon-recording.svg";
 import SlidesIcon from "./icon-slides.svg";
 import RepositoryIcon from "./icon-repository.svg";
+import CalendarIcon from "./icon-calendar.svg";
+import MessageIcon from "./icon-message.svg";
+import LocationIcon from "./icon-location.svg";
 
 export interface TalkMetadata {
   title: string;
@@ -102,10 +105,14 @@ const EventDetails: FunctionComponent<{ data: EventMetadata[] }> = ({
       <div className="col col--12">
         <ul className={styles.list}>
           <li>
-            💬 <strong>{name}</strong>
+            <MessageIcon className={styles.icon} /> <strong>{name}</strong>
           </li>
-          <li>📍 {location}</li>
-          <li>📅 {formatDateString(date)}</li>
+          <li>
+            <LocationIcon className={styles.icon} /> {location}
+          </li>
+          <li>
+            <CalendarIcon className={styles.icon} /> {formatDateString(date)}
+          </li>
         </ul>
       </div>
       {data.length > 1 && (
