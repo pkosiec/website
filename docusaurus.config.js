@@ -67,6 +67,11 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      image: "img/logo-small.png",
+      metadata: [{ name: "twitter:card", content: "summary" }],
+      colorMode: {
+        respectPrefersColorScheme: true,
+      },
       navbar: {
         hideOnScroll: false,
         title: "Paweł Kosiec",

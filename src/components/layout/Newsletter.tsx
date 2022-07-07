@@ -1,4 +1,3 @@
-import clsx from "clsx";
 import React, { FunctionComponent } from "react";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import NewsIcon from "./icon-news.svg";
@@ -27,7 +26,7 @@ export const Newsletter: FunctionComponent = () => {
               type="text"
               name="b_4ed0fd1909674fddee53ac3e7_dfdcae99f5"
               tabIndex={-1}
-              value=""
+              defaultValue=""
             />
           </div>
 
