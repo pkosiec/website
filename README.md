@@ -1,5 +1,5 @@
 <p align="center">
- <img src="https://raw.githubusercontent.com/pkosiec/website/main/src/static/img/logo.png" width="75">
+ <img src="https://raw.githubusercontent.com/pkosiec/website/main/static/img/logo.png" width="75">
 </p>
 
 # Paweł Kosiec - Personal Website
