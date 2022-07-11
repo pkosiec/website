@@ -143,6 +143,11 @@ const config = {
         ],
         copyright: `Copyright © 2012-${new Date().getFullYear()} Paweł Kosiec.`,
       },
+      algolia: {
+        appId: "5DLGGOZ8KA",
+        apiKey: "67ab853aa6285e51112a649d3cb51928",
+        indexName: "kosiec",
+      },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
