@@ -40,7 +40,7 @@ While I have a few ideas for new blog posts in mind, I don't want to limit mysel
 - personal projects announcements,
 - new talks announcements
 - open source,
-- cool projects and apps I stumbled upon into,
+- cool projects and apps I stumbled upon,
 - productivity,
 - personal growth (i.e. soft skills),
 - finance.
