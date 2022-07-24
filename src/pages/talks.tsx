@@ -3,9 +3,9 @@ import Layout from "@theme/Layout";
 
 import Talk, { TalkMetadata } from "../components/talks/Talk";
 
-import BuildingGQLAPIForK8sResDescription from "../components/talks/abstracts/_building-gql-api-for-k8s-res.md";
-import DevTeamCollaborationGitBestPracticesDescription from "../components/talks/abstracts/_dev-team-collaboration-git-best-practices.md";
-import GraphQLInGoDescription from "../components/talks/abstracts/_graphql-in-go.md";
+import BuildingGQLAPIForK8sResDescription from "./assets/talks/_building-gql-api-for-k8s-res.md";
+import DevTeamCollaborationGitBestPracticesDescription from "./assets/talks/_dev-team-collaboration-git-best-practices.md";
+import GraphQLInGoDescription from "./assets/talks/_graphql-in-go.md";
 
 const talks: TalkMetadata[] = [
   {

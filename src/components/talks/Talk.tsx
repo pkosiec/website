@@ -2,12 +2,12 @@ import clsx from "clsx";
 import React, { FunctionComponent } from "react";
 
 import styles from "./Talk.module.scss";
-import RecordingIcon from "./icon-recording.svg";
-import SlidesIcon from "./icon-slides.svg";
-import RepositoryIcon from "./icon-repository.svg";
-import CalendarIcon from "./icon-calendar.svg";
-import MessageIcon from "./icon-message.svg";
-import LocationIcon from "./icon-location.svg";
+import RecordingIcon from "./assets/icon-recording.svg";
+import SlidesIcon from "./assets/icon-slides.svg";
+import RepositoryIcon from "./assets/icon-repository.svg";
+import CalendarIcon from "./assets/icon-calendar.svg";
+import MessageIcon from "./assets/icon-message.svg";
+import LocationIcon from "./assets/icon-location.svg";
 
 export interface TalkMetadata {
   title: string;

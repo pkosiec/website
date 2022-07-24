@@ -3,33 +3,34 @@ import Layout from "@theme/Layout";
 
 import { Project, ProjectData } from "../components/projects/Project";
 
+const assetsDir = "./assets/projects";
 const projects: ProjectData[] = [
   {
     title: "Capact",
     description: "A unified way to manage applications and infrastructure.",
     url: "https://capact.io",
-    image: require("./assets/capact.png"),
+    image: require(`${assetsDir}/capact.png`),
     role: "Maintainer",
   },
   {
     title: "Mongo Seeding",
     description: "Ultimate solution for populating MongoDB database.",
     url: "https://github.com/pkosiec/mongo-seeding",
-    image: require("./assets/mongo-seeding.png"),
+    image: require(`${assetsDir}/mongo-seeding.png`),
     role: "Author",
   },
   {
     title: "Terminer",
     description: "Upgrade your terminal experience with a single command.",
     url: "https://github.com/pkosiec/terminer",
-    image: require("./assets/terminer.png"),
+    image: require(`${assetsDir}/terminer.png`),
     role: "Author",
   },
   {
     title: "Gophers Silesia",
     description: "Go & Cloud Native Meetup organized in Katowice, Poland",
     url: "https://www.meetup.com/GophersSilesia",
-    image: require("./assets/gophers-silesia.png"),
+    image: require(`${assetsDir}/gophers-silesia.png`),
     role: "Organizer",
   },
 ];

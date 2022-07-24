@@ -2,7 +2,7 @@ import clsx from "clsx";
 import React, { FunctionComponent } from "react";
 import Image from "@theme/IdealImage";
 
-import DiscoverIcon from "./icon-discover.svg";
+import DiscoverIcon from "./assets/icon-discover.svg";
 import styles from "./Project.module.scss";
 
 export interface ProjectData {

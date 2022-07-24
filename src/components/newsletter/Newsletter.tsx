@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react";
 
-import NewsIcon from "./icon-news.svg";
+import NewsIcon from "./assets/icon-news.svg";
 
 import styles from "./Newsletter.module.scss";
 
