@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import React, { FunctionComponent } from "react";
-import useBaseUrl from "@docusaurus/useBaseUrl";
+import Image from "@theme/IdealImage";
 
 import DiscoverIcon from "./icon-discover.svg";
 import styles from "./Project.module.scss";
@@ -10,7 +10,7 @@ export interface ProjectData {
   description: string;
   role?: string;
   url: string;
-  imageURL: string;
+  image: string;
 }
 
 export const Project: FunctionComponent<ProjectData> = ({
@@ -18,13 +18,13 @@ export const Project: FunctionComponent<ProjectData> = ({
   description,
   url,
   role,
-  imageURL,
+  image,
 }) => {
   return (
     <div className={clsx("col col--6", styles.cardContainer)}>
       <div className={clsx("card", styles.card)}>
         <div className={clsx("card__image", styles.image)}>
-          <img src={useBaseUrl(imageURL)} alt={description} title={title} />
+          <Image img={image} alt={description} title={title} />
           {role && (
             <span className={clsx("badge badge--secondary", styles.role)}>
               Role: {role}

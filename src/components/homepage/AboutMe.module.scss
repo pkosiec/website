@@ -1,14 +1,23 @@
 @import "../../css/mixins";
 
-.avatar {
-  max-height: 310px;
-  border-radius: 999px;
+.avatarContainer {
+  margin-left: 2rem;
+  @include small-size {
+    margin: 2rem 0 0;
+  }
+}
 
-  &Container {
-    margin-left: 2rem;
-    @include small-size {
-      margin: 2rem 0 0;
-      text-align: center;
-    }
+.avatar {
+  display: block;
+  max-width: 310px;
+  max-height: 310px;
+
+  img,
+  & > div {
+    border-radius: 999px;
+  }
+
+  @include small-size {
+    margin: 0 auto;
   }
 }

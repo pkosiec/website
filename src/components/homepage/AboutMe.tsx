@@ -1,6 +1,7 @@
-import clsx from "clsx";
 import React, { FunctionComponent } from "react";
-import useBaseUrl from "@docusaurus/useBaseUrl";
+import clsx from "clsx";
+import Image from "@theme/IdealImage";
+import avatar from "./assets/avatar.jpg";
 
 import AboutMeDesc from "./_about-me.md";
 import styles from "./AboutMe.module.scss";
@@ -14,7 +15,9 @@ export const AboutMe: FunctionComponent = () => {
           <AboutMeDesc />
         </div>
         <div className={clsx("col col--5", styles.avatarContainer)}>
-          <img src={useBaseUrl("/img/avatar.jpg")} className={styles.avatar} />
+          <div className={styles.avatar}>
+            <Image img={avatar} />
+          </div>
         </div>
       </div>
     </div>
