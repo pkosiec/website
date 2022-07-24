@@ -55,18 +55,6 @@ const config = {
         },
         theme: {
           customCss: [require.resolve("./src/css/custom.scss")],
-          metadata: [
-            {
-              name: "description",
-              content:
-                "I am software developer interested in technology and gadgets. Cloud-native and open-source enthusiast.",
-            },
-            {
-              name: "keywords",
-              content:
-                "fullstack,frontend,backend,developer,engineer,go,golang,javascript,react,reactjs,kubernetes,devops,cloud,cloud-native,open-source",
-            },
-          ],
         },
       }),
     ],
@@ -76,7 +64,22 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       image: "img/logo-small.png",
-      metadata: [{ name: "twitter:card", content: "summary" }],
+      metadata: [
+        {
+          name: "description",
+          content:
+            "I am software developer interested in technology and gadgets. Cloud-native and open-source enthusiast.",
+        },
+        {
+          name: "keywords",
+          content:
+            "fullstack,frontend,backend,developer,engineer,go,golang,javascript,graphql,grpc,rest,react,reactjs,kubernetes,devops,cloud,cloud-native,cka,ckad,open-source,gophers,silesia",
+        },
+        {
+          name: "twitter:card",
+          content: "summary",
+        },
+      ],
       colorMode: {
         respectPrefersColorScheme: true,
       },
