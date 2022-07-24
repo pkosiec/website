@@ -22,8 +22,16 @@ const config = {
   projectName: "website",
 
   customFields: {
-    newsletterFormAction:
-      "https://gmail.us14.list-manage.com/subscribe/post?u=4ed0fd1909674fddee53ac3e7&amp;id=dfdcae99f5",
+    newsletter: {
+      action: "http://newsletter.kosiec.dev/add_subscriber",
+      method: "post",
+      emailFieldName: "member[email]",
+      firstNameFieldName: "member[first_name]",
+      submitButtonName: "member[subscribe]",
+      tosURL: "https://www.getrevue.co/terms",
+      privacyPolicyURL: "https://www.getrevue.co/privacy",
+      serviceName: "Revue",
+    },
   },
 
   i18n: {

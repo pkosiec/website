@@ -1,6 +1,6 @@
 @import "../../css/mixins";
 
-.footerWrapper {
+.newsWrapper {
   background-color: var(--ifm-color-emphasis-100);
   padding: 2rem 0;
 }
@@ -34,4 +34,9 @@
   [data-theme="dark"] & {
     fill: var(--ifm-font-color-base);
   }
+}
+
+.formFooter {
+  margin-top: 1rem;
+  font-size: 0.8rem;
 }
