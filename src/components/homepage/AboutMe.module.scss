@@ -7,14 +7,16 @@
   }
 }
 
+$avatar-size: 310px;
 .avatar {
   display: block;
-  max-width: 310px;
-  max-height: 310px;
+  max-width: $avatar-size;
+  max-height: $avatar-size;
 
   img,
   & > div {
     border-radius: 999px;
+    max-height: $avatar-size;
   }
 
   @include small-size {
