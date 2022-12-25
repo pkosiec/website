@@ -51,6 +51,17 @@ export const Newsletter: FunctionComponent<NewsletterProps> = ({ data }) => {
             required
           />
           <input name={firstNameFieldName} placeholder="Your first name" />
+          <div
+            style={{ position: "absolute", left: "-5000px" }}
+            aria-hidden="true"
+          >
+            <input
+              type="text"
+              name="b_4ed0fd1909674fddee53ac3e7_dfdcae99f5"
+              tabIndex={-1}
+              value=""
+            />
+          </div>
           <button
             type="submit"
             name={submitButtonName}

@@ -23,14 +23,15 @@ const config = {
 
   customFields: {
     newsletter: {
-      action: "http://newsletter.kosiec.dev/add_subscriber",
+      action:
+        "https://dev.us14.list-manage.com/subscribe/post?u=4ed0fd1909674fddee53ac3e7&amp;id=dfdcae99f5&amp;f_id=004887e0f0",
       method: "post",
-      emailFieldName: "member[email]",
-      firstNameFieldName: "member[first_name]",
-      submitButtonName: "member[subscribe]",
-      tosURL: "https://www.getrevue.co/terms",
-      privacyPolicyURL: "https://www.getrevue.co/privacy",
-      serviceName: "Revue",
+      emailFieldName: "EMAIL",
+      firstNameFieldName: "FNAME",
+      submitButtonName: "subscribe",
+      tosURL: "https://mailchimp.com/legal/terms/",
+      privacyPolicyURL: "https://www.intuit.com/privacy/statement/",
+      serviceName: "Mailchimp",
     },
   },
 
