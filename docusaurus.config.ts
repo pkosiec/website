@@ -98,7 +98,6 @@ const config: Config = {
         srcDark: "img/logo-white.svg",
       },
       items: [
-        { to: "/blog", label: "Blog", position: "left" },
         { to: "/projects", label: "Projects", position: "left" },
         { to: "/talks", label: "Talks", position: "left" },
       ],
@@ -137,23 +136,6 @@ const config: Config = {
             {
               label: "Talks",
               to: "/talks",
-            },
-          ],
-        },
-        {
-          title: "Blog feed",
-          items: [
-            {
-              label: "RSS",
-              to: "pathname:///blog/rss.xml",
-            },
-            {
-              label: "Atom",
-              to: "pathname:///blog/atom.xml",
-            },
-            {
-              label: "JSON",
-              to: "pathname:///blog/feed.json",
             },
           ],
         },
