@@ -19,6 +19,7 @@ const config: Config = {
 
   customFields: {
     newsletter: {
+      enabled: false,
       action:
         "https://dev.us14.list-manage.com/subscribe/post?u=4ed0fd1909674fddee53ac3e7&amp;id=dfdcae99f5&amp;f_id=004887e0f0",
       method: "post",
