@@ -9,6 +9,7 @@ export interface NewsletterProps {
 }
 
 export interface NewsletterData {
+  enabled?: boolean;
   action: string;
   method: "get" | "post";
   emailFieldName: string;
@@ -21,6 +22,7 @@ export interface NewsletterData {
 
 export const Newsletter: FunctionComponent<NewsletterProps> = ({ data }) => {
   const {
+    enabled,
     action,
     method,
     emailFieldName,
@@ -30,6 +32,10 @@ export const Newsletter: FunctionComponent<NewsletterProps> = ({ data }) => {
     privacyPolicyURL,
     serviceName,
   } = data;
+
+  if (!enabled) {
+    return null;
+  }
 
   return (
     <div className={styles.newsWrapper}>

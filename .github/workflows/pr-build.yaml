@@ -70,5 +70,5 @@ jobs:
           file-extension: ".md"
           check-modified-files-only: "yes"
           config-file: ".mlc.config.json"
-          folder-path: "blog, src/components/talks/abstracts, src/components/homepage"
+          folder-path: "blog, src/components/homepage"
           base-branch: "main"
